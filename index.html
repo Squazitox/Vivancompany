@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vivancompany - Conglomerado Empresarial Innovador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+      .hero-gradient {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+          url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        min-height: 100vh;
+      }
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .smooth-scroll {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="smooth-scroll">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <!-- Espacio para logo personalizado - puedes reemplazar con tu imagen -->
+              <div
+                class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center border-2 border-blue-200"
+              >
+                <svg
+                  class="h-6 w-6 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"
+                  />
+                  <path
+                    d="M9 12l2 2 4-4"
+                    stroke="white"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <!-- Para usar tu propio logo, reemplaza el div anterior con:
+                        <img src="URL_DE_TU_LOGO" alt="Vivancompany Logo" class="h-8 w-8 object-contain" onerror="this.style.display='none';">
+                        -->
+            </div>
+            <div class="ml-3">
+              <h1 class="text-xl font-bold text-gray-800">Vivancompany</h1>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#inicio"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                >Inicio</a
+              >
+              <a
+                href="#servicios"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                >Servicios</a
+              >
+              <a
+                href="#nosotros"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                >Nosotros</a
+              >
+              <a
+                href="#contacto"
+                class="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
+                >Contacto</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-700 hover:text-indigo-600"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="#inicio"
+            class="block px-3 py-2 text-gray-700 hover:text-blue-600"
+            >Inicio</a
+          >
+          <a
+            href="#servicios"
+            class="block px-3 py-2 text-gray-700 hover:text-blue-600"
+            >Servicios</a
+          >
+          <a
+            href="#nosotros"
+            class="block px-3 py-2 text-gray-700 hover:text-blue-600"
+            >Nosotros</a
+          >
+          <a
+            href="#contacto"
+            class="block px-3 py-2 text-gray-700 hover:text-blue-600"
+            >Contacto</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient pt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+            Conglomerado Empresarial
+            <span class="block text-yellow-300">Vivancompany</span>
+          </h1>
+          <p class="text-xl text-white mb-8 max-w-3xl mx-auto">
+            Lideramos múltiples sectores con empresas especializadas. Desde
+            servicios de motocicletas hasta soluciones innovadoras para tu
+            negocio.
+          </p>
+          <div class="space-x-4">
+            <button
+              onclick="document.getElementById('contacto').scrollIntoView()"
+              class="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+            >
+              Comenzar Proyecto
+            </button>
+            <button
+              onclick="document.getElementById('servicios').scrollIntoView()"
+              class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+            >
+              Ver Servicios
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Nuestras Empresas
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Un conglomerado diversificado con empresas líderes en diferentes
+            sectores
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+            <div
+              class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-red-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+                <path
+                  d="M19 12c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7 7-3.13 7-7z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              🏍️ Topito Biker
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Servicios especializados para motocicletas. Mantenimiento,
+              reparación y venta de repuestos para todo tipo de motos.
+            </p>
+            <ul class="text-sm text-gray-500 space-y-2 mb-6">
+              <li>• Mantenimiento preventivo</li>
+              <li>• Reparaciones especializadas</li>
+              <li>• Venta de repuestos</li>
+              <li>• Asesoría técnica</li>
+            </ul>
+            <button
+              onclick="showRepuestosPage()"
+              class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors w-full"
+            >
+              Ver Repuestos
+            </button>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+            <div
+              class="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              💼 Soluciones Empresariales
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Consultoría y desarrollo de soluciones tecnológicas personalizadas
+              para empresas de todos los tamaños.
+            </p>
+            <ul class="text-sm text-gray-500 space-y-2">
+              <li>• Consultoría estratégica</li>
+              <li>• Desarrollo de software</li>
+              <li>• Automatización de procesos</li>
+              <li>• Transformación digital</li>
+            </ul>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-blue-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              🌍 Expansión Internacional
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Servicios de expansión y desarrollo de mercados internacionales
+              para empresas que buscan crecer globalmente.
+            </p>
+            <ul class="text-sm text-gray-500 space-y-2">
+              <li>• Análisis de mercados</li>
+              <li>• Estrategias de entrada</li>
+              <li>• Alianzas comerciales</li>
+              <li>• Gestión internacional</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              ¿Por qué elegir Vivancompany?
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Como conglomerado empresarial diversificado, ofrecemos soluciones
+              integrales a través de nuestras empresas especializadas. Desde
+              Topito Biker con servicios de motocicletas hasta consultoría
+              empresarial, cubrimos múltiples sectores con excelencia.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4"
+                >
+                  <svg
+                    class="w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-700"
+                  >Múltiples sectores empresariales</span
+                >
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4"
+                >
+                  <svg
+                    class="w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-700"
+                  >Topito Biker: Líder en servicios de motos</span
+                >
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4"
+                >
+                  <svg
+                    class="w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-700"
+                  >Soluciones integrales personalizadas</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-red-50 p-6 rounded-xl text-center">
+              <div class="text-3xl font-bold text-red-600 mb-2">3+</div>
+              <div class="text-gray-600">Empresas del Grupo</div>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-xl text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">15+</div>
+              <div class="text-gray-600">Años de Experiencia</div>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-xl text-center">
+              <div class="text-3xl font-bold text-white mb-2">1000+</div>
+              <div class="text-gray-300">Clientes Atendidos</div>
+            </div>
+            <div class="bg-red-50 p-6 rounded-xl text-center">
+              <div class="text-3xl font-bold text-red-600 mb-2">5</div>
+              <div class="text-gray-600">Sectores Diferentes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+            ¿Listo para comenzar?
+          </h2>
+          <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            Contáctanos hoy y descubre cómo podemos transformar tu negocio con
+            tecnología
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-6">
+              Información de Contacto
+            </h3>
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                    />
+                    <path
+                      d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">Email</div>
+                  <div class="text-gray-300">contacto@vivancompany.com</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">Teléfono</div>
+                  <div class="text-gray-300">+1 (555) 123-4567</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4"
+                >
+                  <svg
+                    class="w-6 h-6 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">Oficina</div>
+                  <div class="text-gray-300">123 Tech Street, Ciudad</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <form id="contact-form" class="space-y-6">
+              <div>
+                <label class="block text-white font-semibold mb-2"
+                  >Nombre</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-white font-semibold mb-2">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-white font-semibold mb-2"
+                  >Servicio de Interés</label
+                >
+                <select
+                  id="service"
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"
+                >
+                  <option value="">Selecciona una empresa</option>
+                  <option value="topito">
+                    Topito Biker - Servicios de Motos
+                  </option>
+                  <option value="business">Soluciones Empresariales</option>
+                  <option value="international">Expansión Internacional</option>
+                  <option value="other">Otro</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-white font-semibold mb-2"
+                  >Mensaje</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+              >
+                Enviar Mensaje
+              </button>
+            </form>
+            <div id="form-message" class="mt-4 p-4 rounded-lg hidden"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Topito Biker Repuestos Page -->
+    <div
+      id="repuestos-page"
+      class="hidden fixed inset-0 bg-white z-50 overflow-y-auto"
+    >
+      <!-- Header -->
+      <div
+        class="bg-red-600 text-white p-8"
+        style="
+          background: linear-gradient(
+              rgba(220, 38, 38, 0.8),
+              rgba(185, 28, 28, 0.9)
+            ),
+            url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+          background-size: cover;
+          background-position: center;
+          min-height: 250px;
+        "
+      >
+        <div class="max-w-7xl mx-auto flex justify-between items-center h-full">
+          <div class="flex items-center space-x-8">
+            <!-- Logo/Image Space - Más grande -->
+            <div
+              class="w-40 h-32 bg-white bg-opacity-20 rounded-lg flex items-center justify-center border-2 border-white border-opacity-30"
+            >
+              <svg
+                class="w-32 h-24 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+            </div>
+            <div class="space-y-2">
+              <h1 class="text-5xl font-bold">🏍️ Topito Biker</h1>
+              <p class="text-red-100 text-2xl">Repuestos y Accesorios</p>
+            </div>
+          </div>
+          <button
+            onclick="hideRepuestosPage()"
+            class="text-white hover:text-gray-200"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search and Filters -->
+      <div class="bg-gray-100 p-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-3 gap-4">
+            <input
+              type="text"
+              id="search-repuestos"
+              placeholder="Buscar repuestos..."
+              class="px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500"
+            />
+            <select
+              id="categoria-filter"
+              class="px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500"
+            >
+              <option value="">Todas las categorías</option>
+              <option value="motor">Motor</option>
+              <option value="frenos">Frenos</option>
+              <option value="suspension">Suspensión</option>
+              <option value="electrico">Sistema Eléctrico</option>
+              <option value="carroceria">Carrocería</option>
+            </select>
+            <select
+              id="marca-filter"
+              class="px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500"
+            >
+              <option value="">Todas las marcas</option>
+              <option value="yamaha">Yamaha</option>
+              <option value="honda">Honda</option>
+              <option value="kawasaki">Kawasaki</option>
+              <option value="suzuki">Suzuki</option>
+              <option value="bajaj">Bajaj</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="max-w-7xl mx-auto p-6">
+        <div
+          id="productos-grid"
+          class="grid md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <!-- Products will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Shopping Cart -->
+      <div
+        id="cart-sidebar"
+        class="fixed right-0 top-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform z-60"
+      >
+        <div class="p-4 bg-red-600 text-white">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-bold">Carrito de Compras</h3>
+            <button onclick="toggleCart()" class="text-white">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="p-4">
+          <div id="cart-items" class="space-y-4 mb-4">
+            <!-- Cart items will be populated by JavaScript -->
+          </div>
+          <div class="border-t pt-4">
+            <div class="flex justify-between items-center mb-4">
+              <span class="font-bold">Total:</span>
+              <span id="cart-total" class="font-bold text-red-600">$0</span>
+            </div>
+            <button
+              onclick="showPaymentModal()"
+              class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors"
+            >
+              Proceder al Pago
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Button -->
+      <button
+        onclick="toggleCart()"
+        class="fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-full shadow-lg hover:bg-red-700 transition-colors"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"
+          ></path>
+        </svg>
+        <span
+          id="cart-count"
+          class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center"
+          >0</span
+        >
+      </button>
+    </div>
+
+    <!-- Payment Modal -->
+    <div
+      id="payment-modal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 z-70 flex items-center justify-center p-4"
+    >
+      <div
+        class="bg-white rounded-lg max-w-md w-full max-h-screen overflow-y-auto"
+      >
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-900">Finalizar Compra</h2>
+            <button
+              onclick="hidePaymentModal()"
+              class="text-gray-500 hover:text-gray-700"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-3">Resumen del Pedido</h3>
+            <div id="payment-summary" class="bg-gray-50 p-4 rounded-lg">
+              <!-- Order items will be populated by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Customer Information -->
+          <form id="payment-form" class="space-y-4">
+            <div>
+              <h3 class="text-lg font-semibold mb-3">
+                Información del Cliente
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1"
+                    >Nombre</label
+                  >
+                  <input
+                    type="text"
+                    id="customer-name"
+                    required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1"
+                    >Apellido</label
+                  >
+                  <input
+                    type="text"
+                    id="customer-lastname"
+                    required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                  />
+                </div>
+              </div>
+              <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="customer-email"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+              </div>
+              <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Teléfono</label
+                >
+                <input
+                  type="tel"
+                  id="customer-phone"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+              </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div>
+              <h3 class="text-lg font-semibold mb-3">Dirección de Entrega</h3>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1"
+                    >Dirección</label
+                  >
+                  <input
+                    type="text"
+                    id="shipping-address"
+                    required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                  />
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1"
+                      >Ciudad</label
+                    >
+                    <input
+                      type="text"
+                      id="shipping-city"
+                      required
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1"
+                      >Código Postal</label
+                    >
+                    <input
+                      type="text"
+                      id="shipping-zip"
+                      required
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div>
+              <h3 class="text-lg font-semibold mb-3">Método de Pago</h3>
+              <div class="space-y-3">
+                <label
+                  class="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50"
+                >
+                  <input
+                    type="radio"
+                    name="payment-method"
+                    value="card"
+                    class="mr-3"
+                    checked
+                  />
+                  <div class="flex items-center">
+                    <svg
+                      class="w-6 h-6 text-blue-600 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"
+                      />
+                    </svg>
+                    <span class="font-medium">Tarjeta de Crédito/Débito</span>
+                  </div>
+                </label>
+                <label
+                  class="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50"
+                >
+                  <input
+                    type="radio"
+                    name="payment-method"
+                    value="paypal"
+                    class="mr-3"
+                  />
+                  <div class="flex items-center">
+                    <svg
+                      class="w-6 h-6 text-blue-500 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.26-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.75.75 0 0 0-.741.633l-1.398 8.864a.641.641 0 0 0 .633.74h4.606a.75.75 0 0 0 .741-.633l.131-.828.858-5.431a.75.75 0 0 1 .741-.633h.464c3.64 0 6.499-1.479 7.32-5.749.34-1.77.128-3.253-.676-4.283z"
+                      />
+                    </svg>
+                    <span class="font-medium">PayPal</span>
+                  </div>
+                </label>
+                <label
+                  class="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50"
+                >
+                  <input
+                    type="radio"
+                    name="payment-method"
+                    value="transfer"
+                    class="mr-3"
+                  />
+                  <div class="flex items-center">
+                    <svg
+                      class="w-6 h-6 text-green-600 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+                      />
+                    </svg>
+                    <span class="font-medium">Transferencia Bancaria</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Card Details (shown when card is selected) -->
+            <div id="card-details" class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Número de Tarjeta</label
+                >
+                <input
+                  type="text"
+                  id="card-number"
+                  placeholder="1234 5678 9012 3456"
+                  maxlength="19"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1"
+                    >Fecha de Vencimiento</label
+                  >
+                  <input
+                    type="text"
+                    id="card-expiry"
+                    placeholder="MM/AA"
+                    maxlength="5"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1"
+                    >CVV</label
+                  >
+                  <input
+                    type="text"
+                    id="card-cvv"
+                    placeholder="123"
+                    maxlength="4"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Nombre en la Tarjeta</label
+                >
+                <input
+                  type="text"
+                  id="card-name"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+              </div>
+            </div>
+
+            <!-- Total and Submit -->
+            <div class="border-t pt-4">
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-lg font-bold">Total a Pagar:</span>
+                <span id="payment-total" class="text-2xl font-bold text-red-600"
+                  >$0</span
+                >
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+              >
+                Confirmar Pago
+              </button>
+              <p class="text-xs text-gray-500 text-center mt-2">
+                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded"
+                  >DEMO</span
+                >
+                Esta es una demostración. No se procesarán pagos reales.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center mb-4">
+              <!-- Espacio para logo en footer -->
+              <div
+                class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center border-2 border-blue-200"
+              >
+                <svg
+                  class="h-6 w-6 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"
+                  />
+                  <path
+                    d="M9 12l2 2 4-4"
+                    stroke="white"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <h3 class="ml-3 text-xl font-bold text-white">Vivancompany</h3>
+            </div>
+            <p class="text-gray-400">
+              Conglomerado empresarial diversificado con presencia en múltiples
+              sectores desde 2009.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-4">Nuestras Empresas</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Topito Biker</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Soluciones Empresariales</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Expansión Internacional</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Nuevos Proyectos</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-4">Empresa</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Sobre Nosotros</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Equipo</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Carreras</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-4">Síguenos</h4>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-400">
+            &copy; 2024 Vivancompany. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Products data
+      const productos = [
+        {
+          id: 1,
+          nombre: "Filtro de Aceite",
+          categoria: "motor",
+          marca: "yamaha",
+          precio: 35,
+          imagen: "🔧",
+        },
+        {
+          id: 2,
+          nombre: "Pastillas de Freno",
+          categoria: "frenos",
+          marca: "honda",
+          precio: 65,
+          imagen: "🛑",
+        },
+        {
+          id: 3,
+          nombre: "Amortiguador Trasero",
+          categoria: "suspension",
+          marca: "kawasaki",
+          precio: 180,
+          imagen: "🔩",
+        },
+        {
+          id: 4,
+          nombre: "Batería 12V",
+          categoria: "electrico",
+          marca: "suzuki",
+          precio: 120,
+          imagen: "🔋",
+        },
+        {
+          id: 5,
+          nombre: "Espejo Retrovisor",
+          categoria: "carroceria",
+          marca: "bajaj",
+          precio: 50,
+          imagen: "🪞",
+        },
+        {
+          id: 6,
+          nombre: "Cadena de Transmisión",
+          categoria: "motor",
+          marca: "yamaha",
+          precio: 95,
+          imagen: "⛓️",
+        },
+        {
+          id: 7,
+          nombre: "Disco de Freno",
+          categoria: "frenos",
+          marca: "honda",
+          precio: 135,
+          imagen: "⚙️",
+        },
+        {
+          id: 8,
+          nombre: "Bujía NGK",
+          categoria: "motor",
+          marca: "kawasaki",
+          precio: 22,
+          imagen: "⚡",
+        },
+        {
+          id: 9,
+          nombre: "Faro LED",
+          categoria: "electrico",
+          marca: "suzuki",
+          precio: 85,
+          imagen: "💡",
+        },
+        {
+          id: 10,
+          nombre: "Llanta Trasera",
+          categoria: "carroceria",
+          marca: "bajaj",
+          precio: 220,
+          imagen: "🛞",
+        },
+        {
+          id: 11,
+          nombre: "Aceite Motor 10W-40",
+          categoria: "motor",
+          marca: "yamaha",
+          precio: 45,
+          imagen: "🛢️",
+        },
+        {
+          id: 12,
+          nombre: "Kit de Embrague",
+          categoria: "motor",
+          marca: "honda",
+          precio: 290,
+          imagen: "🔧",
+        },
+      ];
+
+      let cart = [];
+      let filteredProducts = [...productos];
+
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.toggle("hidden");
+        });
+
+      // Repuestos page functions
+      function showRepuestosPage() {
+        document.getElementById("repuestos-page").classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        renderProducts();
+      }
+
+      function hideRepuestosPage() {
+        document.getElementById("repuestos-page").classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      function renderProducts() {
+        const grid = document.getElementById("productos-grid");
+        grid.innerHTML = "";
+
+        filteredProducts.forEach((producto) => {
+          const productCard = `
+                    <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow">
+                        <div class="text-4xl text-center mb-4">${
+                          producto.imagen
+                        }</div>
+                        <h3 class="font-bold text-gray-900 mb-2">${
+                          producto.nombre
+                        }</h3>
+                        <p class="text-sm text-gray-600 mb-2">Marca: ${producto.marca.toUpperCase()}</p>
+                        <p class="text-sm text-gray-600 mb-4">Categoría: ${
+                          producto.categoria
+                        }</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-red-600">S/ ${
+                              producto.precio
+                            }</span>
+                            <button onclick="addToCart(${
+                              producto.id
+                            })" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition-colors">
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                `;
+          grid.innerHTML += productCard;
+        });
+      }
+
+      function addToCart(productId) {
+        const producto = productos.find((p) => p.id === productId);
+        const existingItem = cart.find((item) => item.id === productId);
+
+        if (existingItem) {
+          existingItem.cantidad++;
+        } else {
+          cart.push({ ...producto, cantidad: 1 });
+        }
+
+        updateCartUI();
+      }
+
+      function removeFromCart(productId) {
+        cart = cart.filter((item) => item.id !== productId);
+        updateCartUI();
+      }
+
+      function updateCartUI() {
+        const cartItems = document.getElementById("cart-items");
+        const cartCount = document.getElementById("cart-count");
+        const cartTotal = document.getElementById("cart-total");
+
+        cartCount.textContent = cart.reduce(
+          (sum, item) => sum + item.cantidad,
+          0
+        );
+
+        cartItems.innerHTML = "";
+        let total = 0;
+
+        cart.forEach((item) => {
+          total += item.precio * item.cantidad;
+          cartItems.innerHTML += `
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <div>
+                            <div class="font-semibold">${item.nombre}</div>
+                            <div class="text-sm text-gray-600">S/ ${item.precio} x ${item.cantidad}</div>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-red-600 hover:text-red-800">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+        });
+
+        cartTotal.textContent = `S/ ${total}`;
+      }
+
+      function toggleCart() {
+        const cartSidebar = document.getElementById("cart-sidebar");
+        cartSidebar.classList.toggle("translate-x-full");
+      }
+
+      function showPaymentModal() {
+        if (cart.length === 0) {
+          alert("Tu carrito está vacío");
+          return;
+        }
+
+        updatePaymentSummary();
+        document.getElementById("payment-modal").classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function hidePaymentModal() {
+        document.getElementById("payment-modal").classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      function updatePaymentSummary() {
+        const summary = document.getElementById("payment-summary");
+        const total = document.getElementById("payment-total");
+
+        let summaryHTML = "";
+        let totalAmount = 0;
+
+        cart.forEach((item) => {
+          const itemTotal = item.precio * item.cantidad;
+          totalAmount += itemTotal;
+          summaryHTML += `
+                    <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                        <div>
+                            <div class="font-medium">${item.nombre}</div>
+                            <div class="text-sm text-gray-600">${item.cantidad} x S/ ${item.precio}</div>
+                        </div>
+                        <div class="font-semibold">S/ ${itemTotal}</div>
+                    </div>
+                `;
+        });
+
+        summaryHTML += `
+                <div class="flex justify-between items-center pt-3 font-bold text-lg">
+                    <span>Total:</span>
+                    <span class="text-red-600">S/ ${totalAmount}</span>
+                </div>
+            `;
+
+        summary.innerHTML = summaryHTML;
+        total.textContent = `S/ ${totalAmount}`;
+      }
+
+      // Search and filter functionality
+      document
+        .getElementById("search-repuestos")
+        .addEventListener("input", filterProducts);
+      document
+        .getElementById("categoria-filter")
+        .addEventListener("change", filterProducts);
+      document
+        .getElementById("marca-filter")
+        .addEventListener("change", filterProducts);
+
+      function filterProducts() {
+        const search = document
+          .getElementById("search-repuestos")
+          .value.toLowerCase();
+        const categoria = document.getElementById("categoria-filter").value;
+        const marca = document.getElementById("marca-filter").value;
+
+        filteredProducts = productos.filter((producto) => {
+          const matchesSearch = producto.nombre.toLowerCase().includes(search);
+          const matchesCategoria =
+            !categoria || producto.categoria === categoria;
+          const matchesMarca = !marca || producto.marca === marca;
+
+          return matchesSearch && matchesCategoria && matchesMarca;
+        });
+
+        renderProducts();
+      }
+
+      // Contact form handling
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const service = document.getElementById("service").value;
+          const message = document.getElementById("message").value;
+
+          const messageDiv = document.getElementById("form-message");
+
+          if (name && email && message) {
+            messageDiv.className =
+              "mt-4 p-4 rounded-lg bg-green-100 text-green-800";
+            messageDiv.textContent =
+              "¡Gracias por tu mensaje! Te contactaremos pronto.";
+            messageDiv.classList.remove("hidden");
+
+            // Reset form
+            this.reset();
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+              messageDiv.classList.add("hidden");
+            }, 5000);
+          } else {
+            messageDiv.className =
+              "mt-4 p-4 rounded-lg bg-red-100 text-red-800";
+            messageDiv.textContent =
+              "Por favor completa todos los campos requeridos.";
+            messageDiv.classList.remove("hidden");
+          }
+        });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById("mobile-menu");
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      // Payment form handling
+      document
+        .getElementById("payment-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const paymentMethod = document.querySelector(
+            'input[name="payment-method"]:checked'
+          ).value;
+          const customerName = document.getElementById("customer-name").value;
+          const customerEmail = document.getElementById("customer-email").value;
+          const total = cart.reduce(
+            (sum, item) => sum + item.precio * item.cantidad,
+            0
+          );
+
+          // Simulate payment processing
+          const processingModal = document.createElement("div");
+          processingModal.className =
+            "fixed inset-0 bg-black bg-opacity-75 z-80 flex items-center justify-center";
+          processingModal.innerHTML = `
+                <div class="bg-white p-8 rounded-lg text-center">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
+                    <p class="text-lg font-semibold">Procesando pago...</p>
+                </div>
+            `;
+          document.body.appendChild(processingModal);
+
+          setTimeout(() => {
+            document.body.removeChild(processingModal);
+
+            // Show success message
+            const successModal = document.createElement("div");
+            successModal.className =
+              "fixed inset-0 bg-black bg-opacity-75 z-80 flex items-center justify-center";
+            successModal.innerHTML = `
+                    <div class="bg-white p-8 rounded-lg text-center max-w-md">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">¡Pago Exitoso!</h3>
+                        <p class="text-gray-600 mb-4">Gracias ${customerName}, tu pedido ha sido procesado correctamente.</p>
+                        <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                            <p class="text-sm"><strong>Total pagado:</strong> S/ ${total}</p>
+                            <p class="text-sm"><strong>Método:</strong> ${
+                              paymentMethod === "card"
+                                ? "Tarjeta"
+                                : paymentMethod === "paypal"
+                                ? "PayPal"
+                                : "Transferencia"
+                            }</p>
+                            <p class="text-sm"><strong>Email:</strong> ${customerEmail}</p>
+                        </div>
+                        <p class="text-sm text-gray-500 mb-4">Recibirás un email de confirmación en breve. Te contactaremos para coordinar la entrega.</p>
+                        <button onclick="this.parentElement.parentElement.remove(); hidePaymentModal(); cart = []; updateCartUI(); toggleCart();" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                            Cerrar
+                        </button>
+                    </div>
+                `;
+            document.body.appendChild(successModal);
+          }, 2000);
+        });
+
+      // Payment method toggle
+      document
+        .querySelectorAll('input[name="payment-method"]')
+        .forEach((radio) => {
+          radio.addEventListener("change", function () {
+            const cardDetails = document.getElementById("card-details");
+            if (this.value === "card") {
+              cardDetails.style.display = "block";
+            } else {
+              cardDetails.style.display = "none";
+            }
+          });
+        });
+
+      // Card number formatting
+      document
+        .getElementById("card-number")
+        .addEventListener("input", function (e) {
+          let value = e.target.value.replace(/\s/g, "").replace(/[^0-9]/gi, "");
+          let formattedValue = value.match(/.{1,4}/g)?.join(" ") || value;
+          e.target.value = formattedValue;
+        });
+
+      // Expiry date formatting
+      document
+        .getElementById("card-expiry")
+        .addEventListener("input", function (e) {
+          let value = e.target.value.replace(/\D/g, "");
+          if (value.length >= 2) {
+            value = value.substring(0, 2) + "/" + value.substring(2, 4);
+          }
+          e.target.value = value;
+        });
+
+      // CVV formatting
+      document
+        .getElementById("card-cvv")
+        .addEventListener("input", function (e) {
+          e.target.value = e.target.value.replace(/[^0-9]/g, "");
+        });
+
+      // Add scroll effect to navbar
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          navbar.classList.add("shadow-xl");
+        } else {
+          navbar.classList.remove("shadow-xl");
+        }
+      });
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'986f8c6dc363484e',t:'MTc1OTE5MTU2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
