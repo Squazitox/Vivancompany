@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topito Supply | Repuestos y taller para motos</title>
+<meta name="description" content="Topito Supply: repuestos y accesorios para motos Yamaha, Honda, Kawasaki, Suzuki y Bajaj, mantenimiento y reparación. Pedidos por mensaje o correo. Lima, Perú.">
+<link rel="canonical" href="https://vivancompany.com/topito/">
+<link rel="icon" href="../favicon_io/favicon.ico">
+<link rel="apple-touch-icon" href="../favicon_io/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Topito Supply | Repuestos y taller para motos">
+<meta property="og:description" content="Repuestos y accesorios para motos. Arma tu pedido en la web.">
+<meta property="og:url" content="https://vivancompany.com/topito/">
+<meta property="og:image" content="https://vivancompany.com/assets/topito-logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoPartsStore","name":"Topito Supply","legalName":"VIVANCOMPANY MC S.A.C.","url":"https://vivancompany.com/topito/","image":"https://vivancompany.com/assets/topito-logo.jpg","email":"ventas@vivancompany.com","address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"parentOrganization":{"@type":"Organization","name":"Vivancompany MC S.A.C.","url":"https://vivancompany.com/"}}
+</script>
+<style>
+:root{--bk:#0c0d10;--bk2:#16181d;--bk3:#2a2d34;--red:#e0202f;--redlo:#bb1f2b;--reddk:#7c151c;--wh:#fff;--gr:#b7bcc5;--max:1160px;--disp:"Racing Sans One","Arial Black",Impact,sans-serif;--ui:"Barlow Semi Condensed","Arial Narrow",Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:500 1.05rem/1.55 var(--ui);color:var(--wh);background:var(--bk)}
+h1,h2,h3,.disp{font-family:var(--disp);font-weight:400;line-height:1;letter-spacing:.01em;text-transform:uppercase}
+a{color:inherit}
+:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.chk{height:16px;background:conic-gradient(#fff 25%,#0c0d10 0 50%,#fff 0 75%,#0c0d10 0) 0 0/32px 32px}
+.btn{display:inline-block;border:0;background:var(--red);color:#fff;font:400 1.1rem var(--disp);text-transform:uppercase;letter-spacing:.04em;padding:13px 28px;cursor:pointer;text-decoration:none;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);transition:background .15s,color .15s}
+.btn:hover{background:#fff;color:var(--bk)}
+.btn.ghost{background:#2a2d34}
+.btn.ghost:hover{background:#fff}
+
+header{position:sticky;top:0;z-index:20;background:var(--bk);border-bottom:3px solid var(--red)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:1.55rem}
+.brand img{width:46px;height:46px;border-radius:8px}
+nav{display:flex;align-items:center;gap:24px;font-weight:600;font-size:1.02rem}
+nav a{text-decoration:none}nav a:hover{color:var(--red)}
+nav .back{color:var(--gr);font-size:.92rem}
+.cartbtn{background:var(--red);color:#fff;border:0;padding:9px 18px;font:400 1rem var(--disp);text-transform:uppercase;cursor:pointer;clip-path:polygon(9px 0,100% 0,calc(100% - 9px) 100%,0 100%)}
+.cartbtn span{margin-left:8px;background:#fff;color:var(--bk);padding:0 8px;border-radius:9px;font:700 .85rem var(--ui)}
+@media(max-width:760px){nav .opt{display:none}}
+@media(max-width:520px){nav>a{display:none}.brand{font-size:1.3rem}}
+
+.hero{position:relative;overflow:hidden;background:var(--bk)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(760px 420px at 70% 58%,#343843 0%,transparent 70%)}
+.hero::after{content:"";position:absolute;left:-6%;bottom:-40px;width:60%;height:210px;background:linear-gradient(90deg,var(--red),transparent);transform:skewX(-24deg);opacity:.5}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:.8fr 1.35fr;gap:0;align-items:center;min-height:520px}
+.hero h1{font-size:clamp(2.8rem,6vw,5rem);margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p{font-size:1.18rem;color:var(--gr);max-width:40ch;margin-bottom:26px}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap}
+.hero .bike{width:118%;max-width:none;margin-left:-6%;display:block;filter:drop-shadow(0 18px 30px rgba(0,0,0,.55))}
+.brands{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;font:400 .95rem var(--disp);text-transform:uppercase;letter-spacing:.06em;color:var(--gr)}
+.brands span{border:1px solid var(--bk3);padding:3px 12px}
+@media(prefers-reduced-motion:no-preference){.hero .bike{animation:ride .9s cubic-bezier(.15,.8,.2,1) both}@keyframes ride{from{opacity:0;transform:translateX(70px)}}}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:34px;padding-bottom:26px}.hero .bike{width:106%;margin-left:-3%}}
+
+section{padding:64px 0}
+.sec-h{margin-bottom:28px}
+.sec-h h2{font-size:clamp(2.3rem,5.5vw,3.6rem)}
+.sec-h p{color:var(--gr);margin-top:8px;max-width:58ch}
+#catalogo{background:var(--bk2)}
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-bottom:24px}
+label{display:block;font-weight:700;margin-bottom:4px;font-size:.95rem;color:var(--gr)}
+input,select,textarea{width:100%;font:inherit;padding:11px 12px;background:var(--bk);color:#fff;border:2px solid var(--bk3);border-radius:0}
+input:focus,select:focus,textarea:focus{border-color:var(--red);outline:none}
+@media(max-width:640px){.filters{grid-template-columns:1fr}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.prod{position:relative;background:var(--bk);border-top:4px solid var(--red);padding:18px;display:flex;flex-direction:column}
+.prod svg{width:54px;height:54px;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
+.prod h3{font:700 1.4rem/1.05 var(--ui);margin-bottom:4px}
+.prod .meta{color:var(--gr);font-size:.92rem;text-transform:capitalize}
+.prod .row{margin-top:auto;padding-top:16px;display:flex;justify-content:space-between;align-items:center}
+.prod .price{font:400 1.8rem var(--disp)}
+.prod button{background:#fff;color:var(--bk);border:0;font:400 .95rem var(--disp);text-transform:uppercase;padding:9px 16px;cursor:pointer}
+.prod button:hover{background:var(--red);color:#fff}
+.empty{grid-column:1/-1;padding:30px;border:2px dashed var(--bk3);color:var(--gr);text-align:center}
+.disc{margin-top:18px;color:var(--gr);font-size:.92rem}
+
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px}
+.svc div{padding:18px 0 18px 20px;border-left:5px solid var(--red);margin-bottom:6px}
+.svc h3{font-size:1.5rem;margin-bottom:4px}
+.svc p{color:var(--gr)}
+@media(max-width:700px){.svc{grid-template-columns:1fr}}
+
+#pedir{background:var(--red);color:#fff}
+#pedir .sec-h p{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.steps li{list-style:none;counter-increment:s;background:var(--bk);padding:22px}
+.steps li::before{content:counter(s);font:400 3.2rem var(--disp);color:var(--red);display:block;line-height:1}
+.steps b{display:block;font:400 1.5rem var(--disp);text-transform:uppercase;margin:6px 0}
+.steps span{color:var(--gr)}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
+.contact .tp{width:min(100%,250px);border-radius:14px;display:block;box-shadow:10px 10px 0 var(--red)}
+.ways a{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--bk3);text-decoration:none;font-weight:600}
+.ways a:first-child{border-top:1px solid var(--red)}
+.ways a:hover{color:var(--red)}
+.ways small{display:block;color:var(--gr);font-weight:500}
+.ways .go{font:400 1rem var(--disp);text-transform:uppercase;align-self:center}
+@media(max-width:760px){.contact{grid-template-columns:1fr}}
+
+footer{background:#000;color:var(--gr);padding:30px 0;font-size:.95rem}
+footer .wrap{display:grid;gap:12px}
+footer b{color:#fff}footer a:hover{color:#fff}
+footer .links{display:flex;gap:20px;flex-wrap:wrap}
+
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--bk2);border-left:4px solid var(--red);z-index:40;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.drawer .hd{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--bk3)}
+.drawer h2{font-size:1.8rem}
+.drawer .x{background:none;border:0;color:#fff;font-size:2rem;cursor:pointer;line-height:1}
+.drawer .body{flex:1;overflow-y:auto;padding:14px 18px}
+.item{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--bk3)}
+.qty{display:flex;align-items:center;gap:10px;margin-top:6px}
+.qty button{width:28px;height:28px;border:2px solid #fff;background:none;color:#fff;cursor:pointer;font-weight:700}
+.total{display:flex;justify-content:space-between;font:400 1.8rem var(--disp);margin:14px 0}
+.drawer .f{margin-bottom:10px}
+.done{display:none;margin-top:6px}
+.done.show{display:block}
+.done p{color:var(--gr);margin-bottom:10px}
+.done textarea{height:150px;font-size:.9rem}
+.done .out{display:grid;gap:8px;margin-top:10px}
+.done .out .btn{text-align:center}
+.veil{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:30;display:none}.veil.open{display:block}
+@media(prefers-reduced-motion:reduce){.drawer{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-motor" viewBox="0 0 48 48"><circle cx="24" cy="24" r="7"/><path d="M24 4v7M24 37v7M4 24h7M37 24h7M9.9 9.9l5 5M33.1 33.1l5 5M38.1 9.9l-5 5M14.9 33.1l-5 5"/></symbol>
+  <symbol id="i-frenos" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><circle cx="24" cy="24" r="6"/><circle cx="24" cy="12" r="1.6"/><circle cx="24" cy="36" r="1.6"/><circle cx="12" cy="24" r="1.6"/><circle cx="36" cy="24" r="1.6"/></symbol>
+  <symbol id="i-suspension" viewBox="0 0 48 48"><path d="M24 4v6M24 38v6M14 10h20l-20 7h20l-20 7h20l-20 7h20"/></symbol>
+  <symbol id="i-electrico" viewBox="0 0 48 48"><path d="M27 4 10 27h12l-3 17 19-25H26z"/></symbol>
+  <symbol id="i-carroceria" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><circle cx="24" cy="24" r="11"/><circle cx="24" cy="24" r="3"/><path d="M24 5v8M24 35v8M5 24h8M35 24h8"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="brand disp" href="./"><img src="../assets/topito-logo.jpg" alt="" width="46" height="46"><span>Topito Supply</span></a>
+    <nav aria-label="Principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#taller" class="opt">Taller</a>
+      <a href="#pedir" class="opt">Cómo pedir</a>
+      <a href="#contacto" class="opt">Contacto</a>
+      <a href="../" class="back opt">Vivancompany</a>
+      <button class="cartbtn" id="openCart" aria-label="Abrir carrito">Carrito<span id="count">0</span></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Repuestos<br>para <em>correr</em></h1>
+      <p>Repuestos, accesorios y taller para tu moto. Armas tu pedido en la web y lo confirmas con nosotros: stock, precio final y entrega.</p>
+      <div class="acts">
+        <a class="btn" href="#catalogo">Ver catálogo</a>
+        <a class="btn ghost" href="#contacto">Contacto</a>
+      </div>
+      <div class="brands" aria-label="Marcas"><span>Yamaha</span><span>Honda</span><span>Kawasaki</span><span>Suzuki</span><span>Bajaj</span></div>
+    </div>
+    <img class="bike" src="../assets/moto-carrera.svg" alt="Ilustración de una moto de carrera con piloto" width="900" height="330">
+  </div>
+</section>
+<div class="chk" aria-hidden="true"></div>
+
+<section id="catalogo">
+  <div class="wrap">
+    <div class="sec-h"><h2>Catálogo</h2><p>Filtra por categoría o marca y agrega al carrito. Al terminar, envías el pedido por correo o por mensaje.</p></div>
+    <div class="filters">
+      <div><label for="q">Buscar</label><input id="q" type="search" placeholder="Ej. filtro, bujía, freno"></div>
+      <div><label for="cat">Categoría</label><select id="cat"><option value="">Todas</option></select></div>
+      <div><label for="mar">Marca</label><select id="mar"><option value="">Todas</option></select></div>
+    </div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <p class="disc">Precios en soles, incluyen IGV y son referenciales. Confirmamos stock y precio final contigo antes de vender.</p>
+  </div>
+</section>
+
+<section id="taller">
+  <div class="wrap">
+    <div class="sec-h"><h2>Taller</h2><p>Venta, mantenimiento y reparación de motocicletas.</p></div>
+    <div class="svc">
+      <div><h3>Mantenimiento preventivo</h3><p>Aceite, filtros, frenos, cadena y revisión general para que no te falle en la pista.</p></div>
+      <div><h3>Reparaciones</h3><p>Motor, transmisión, suspensión y sistema eléctrico.</p></div>
+      <div><h3>Venta de repuestos</h3><p>Repuestos y accesorios para las marcas más comunes en Lima.</p></div>
+      <div><h3>Asesoría técnica</h3><p>Te ayudamos a elegir el repuesto correcto para tu modelo antes de comprar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pedir">
+  <div class="wrap">
+    <div class="sec-h"><h2>Cómo pedir</h2><p>Sin pagar en la web: coordinas el pago y la entrega con nosotros.</p></div>
+    <ol class="steps">
+      <li><b>Elige</b><span>Agrega los repuestos que necesitas al carrito.</span></li>
+      <li><b>Envía</b><span>Completa tus datos y envía el pedido por correo o por mensaje.</span></li>
+      <li><b>Confirma</b><span>Te respondemos con stock, precio final, forma de pago y entrega.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap contact">
+    <img class="tp" src="../assets/topito-logo.jpg" alt="Logo de Topito Supply" width="250" height="250" loading="lazy">
+    <div>
+      <div class="sec-h"><h2>Contacto</h2><p>Escríbenos y te respondemos con disponibilidad y precio.</p></div>
+      <div class="ways" id="ways">
+        <a href="mailto:ventas@vivancompany.com?subject=Consulta%20de%20repuestos"><span>Correo<small>ventas@vivancompany.com</small></span><span class="go">Escribir</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Topito Supply</b> es nombre comercial de <b>VIVANCOMPANY MC S.A.C.</b> &middot; RUC 20609532395 &middot; Lima, Perú</div>
+    <div class="links"><a href="../">Vivancompany</a><a href="../apps/">Vivan.co</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos y condiciones</a></div>
+    <div>&copy; <span id="yr">2026</span> Vivancompany MC S.A.C.</div>
+  </div>
+</footer>
+
+<div class="veil" id="veil"></div>
+<aside class="drawer" id="drawer" aria-label="Carrito" aria-hidden="true">
+  <div class="hd"><h2>Tu pedido</h2><button class="x" id="closeCart" aria-label="Cerrar carrito">&times;</button></div>
+  <div class="body">
+    <div id="items"></div>
+    <div class="total"><span>Total</span><span id="total">S/ 0</span></div>
+    <form id="of">
+      <div class="f"><label for="on">Nombre</label><input id="on" required autocomplete="name"></div>
+      <div class="f"><label for="op">Teléfono o usuario para responderte</label><input id="op" required></div>
+      <div class="f"><label for="oa">Distrito de entrega</label><input id="oa" required></div>
+      <button class="btn" type="submit" style="width:100%">Preparar pedido</button>
+    </form>
+    <div class="done" id="done" aria-live="polite">
+      <p id="donemsg"></p>
+      <textarea id="ordertxt" readonly aria-label="Texto del pedido"></textarea>
+      <div class="out" id="out"></div>
+    </div>
+  </div>
+</aside>
+
+<script>
+// === EDITA AQUÍ TUS CANALES ===
+// instagram: solo el usuario, sin @ (ej. "topitosupply"). messenger: usuario de la página de Facebook (ej. "topitosupply").
+// Si dejas un canal vacío, no se muestra.
+const CONFIG = { email: "ventas@vivancompany.com", instagram: "", messenger: "" };
+// ==============================
+
+const productos = [
+  {id:1,nombre:"Filtro de aceite",categoria:"motor",marca:"yamaha",precio:35},
+  {id:2,nombre:"Pastillas de freno",categoria:"frenos",marca:"honda",precio:65},
+  {id:3,nombre:"Amortiguador trasero",categoria:"suspensión",marca:"kawasaki",precio:180},
+  {id:4,nombre:"Batería 12V",categoria:"eléctrico",marca:"suzuki",precio:120},
+  {id:5,nombre:"Espejo retrovisor",categoria:"carrocería",marca:"bajaj",precio:50},
+  {id:6,nombre:"Cadena de transmisión",categoria:"motor",marca:"yamaha",precio:95},
+  {id:7,nombre:"Disco de freno",categoria:"frenos",marca:"honda",precio:135},
+  {id:8,nombre:"Bujía NGK",categoria:"motor",marca:"kawasaki",precio:22},
+  {id:9,nombre:"Faro LED",categoria:"eléctrico",marca:"suzuki",precio:85},
+  {id:10,nombre:"Llanta trasera",categoria:"carrocería",marca:"bajaj",precio:220},
+  {id:11,nombre:"Aceite motor 10W-40",categoria:"motor",marca:"yamaha",precio:45},
+  {id:12,nombre:"Kit de embrague",categoria:"motor",marca:"honda",precio:290}
+];
+const ICON = {"motor":"i-motor","frenos":"i-frenos","suspensión":"i-suspension","eléctrico":"i-electrico","carrocería":"i-carroceria"};
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+let cart = {};
+
+$("yr").textContent = new Date().getFullYear();
+
+// Canales de contacto
+const igUrl = CONFIG.instagram ? "https://ig.me/m/" + encodeURIComponent(CONFIG.instagram) : "";
+const msUrl = CONFIG.messenger ? "https://m.me/" + encodeURIComponent(CONFIG.messenger) : "";
+if (igUrl) $("ways").insertAdjacentHTML("beforeend", `<a href="${igUrl}" target="_blank" rel="noopener"><span>Instagram<small>@${esc(CONFIG.instagram)}</small></span><span class="go">Mensaje</span></a>`);
+if (msUrl) $("ways").insertAdjacentHTML("beforeend", `<a href="${msUrl}" target="_blank" rel="noopener"><span>Messenger<small>${esc(CONFIG.messenger)}</small></span><span class="go">Mensaje</span></a>`);
+
+[...new Set(productos.map(p => p.categoria))].forEach(c => $("cat").add(new Option(cap(c), c)));
+[...new Set(productos.map(p => p.marca))].forEach(m => $("mar").add(new Option(cap(m), m)));
+["q","cat","mar"].forEach(id => $(id).addEventListener("input", render));
+
+function render(){
+  const q=$("q").value.trim().toLowerCase(), c=$("cat").value, m=$("mar").value;
+  const list=productos.filter(p=>p.nombre.toLowerCase().includes(q)&&(!c||p.categoria===c)&&(!m||p.marca===m));
+  $("grid").innerHTML = list.length ? list.map(p=>`
+    <article class="prod">
+      <svg aria-hidden="true"><use href="#${ICON[p.categoria]}"/></svg>
+      <h3>${esc(p.nombre)}</h3>
+      <p class="meta">${esc(p.marca)} &middot; ${esc(p.categoria)}</p>
+      <div class="row"><span class="price">S/ ${p.precio}</span><button data-add="${p.id}" aria-label="Agregar ${esc(p.nombre)} al carrito">Agregar</button></div>
+    </article>`).join("") : `<p class="empty">No hay repuestos con esos filtros. Cambia la búsqueda o escríbenos.</p>`;
+}
+$("grid").addEventListener("click",e=>{const b=e.target.closest("[data-add]");if(b){cart[b.dataset.add]=(cart[b.dataset.add]||0)+1;$("done").classList.remove("show");renderCart();}});
+
+function renderCart(){
+  const ids=Object.keys(cart);let total=0,n=0;
+  $("items").innerHTML = ids.length ? ids.map(id=>{
+    const p=productos.find(x=>x.id==id),q=cart[id];total+=p.precio*q;n+=q;
+    return `<div class="item"><div><strong>${esc(p.nombre)}</strong><div class="qty"><button data-dec="${id}" aria-label="Quitar uno">−</button>${q}<button data-inc="${id}" aria-label="Agregar uno">+</button></div></div><strong>S/ ${p.precio*q}</strong></div>`;
+  }).join("") : `<p class="empty">Tu carrito está vacío. Agrega repuestos del catálogo.</p>`;
+  $("total").textContent="S/ "+total;$("count").textContent=n;
+}
+$("items").addEventListener("click",e=>{const d=e.target.dataset;if(d.inc)cart[d.inc]++;if(d.dec&&--cart[d.dec]<=0)delete cart[d.dec];renderCart();});
+
+function toggle(o){$("drawer").classList.toggle("open",o);$("veil").classList.toggle("open",o);$("drawer").setAttribute("aria-hidden",!o);}
+$("openCart").onclick=()=>toggle(true);
+$("closeCart").onclick=$("veil").onclick=()=>toggle(false);
+document.addEventListener("keydown",e=>e.key==="Escape"&&toggle(false));
+
+$("of").addEventListener("submit",e=>{
+  e.preventDefault();
+  const ids=Object.keys(cart);
+  if(!ids.length){alert("Agrega al menos un repuesto al carrito.");return;}
+  let total=0;
+  const lines=ids.map(id=>{const p=productos.find(x=>x.id==id);total+=p.precio*cart[id];return `• ${cart[id]} x ${p.nombre} (S/ ${p.precio*cart[id]})`;});
+  const msg=`Hola Topito Supply, quiero hacer este pedido:\n${lines.join("\n")}\nTotal referencial: S/ ${total}\n\nNombre: ${$("on").value}\nContacto: ${$("op").value}\nEntrega: ${$("oa").value}`;
+  $("ordertxt").value=msg;
+  let copied=false;
+  try{ if(navigator.clipboard){ navigator.clipboard.writeText(msg); copied=true; } }catch(_){}
+  $("donemsg").textContent = copied ? "Copiamos tu pedido. Envíalo por el canal que prefieras:" : "Copia este pedido y envíalo por el canal que prefieras:";
+  let out = `<a class="btn" href="mailto:${CONFIG.email}?subject=${encodeURIComponent("Pedido de repuestos")}&body=${encodeURIComponent(msg)}">Enviar por correo</a>`;
+  if(igUrl) out += `<a class="btn ghost" href="${igUrl}" target="_blank" rel="noopener">Abrir Instagram y pegar</a>`;
+  if(msUrl) out += `<a class="btn ghost" href="${msUrl}" target="_blank" rel="noopener">Abrir Messenger y pegar</a>`;
+  $("out").innerHTML = out;
+  $("done").classList.add("show");
+  $("ordertxt").focus();
+});
+render();renderCart();
+</script>
+</body>
+</html>

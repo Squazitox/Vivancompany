@@ -3,343 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vivancompany | Topito Biker, repuestos y taller de motos</title>
-<meta name="description" content="Vivancompany agrupa Topito Biker (repuestos y servicio para motos), soluciones empresariales y expansión internacional.">
-<meta property="og:title" content="Vivancompany | Topito Biker">
-<meta property="og:description" content="Repuestos y taller para tu moto. Pide por WhatsApp.">
+<title>Vivancompany MC S.A.C. | Topito Supply y Vivan.co</title>
+<meta name="description" content="Vivancompany MC S.A.C. (RUC 20609532395), empresa peruana con sede en Lima. Dos líneas de negocio: Topito Supply, repuestos y taller para motos, y Vivan.co, desarrollo de aplicaciones y software a medida.">
+<link rel="canonical" href="https://vivancompany.com/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <meta property="og:type" content="website">
-<link rel="icon" href="favicon_io/favicon.ico">
+<meta property="og:title" content="Vivancompany MC S.A.C.">
+<meta property="og:description" content="Topito Supply (repuestos y taller para motos) y Vivan.co (apps y software a medida). Lima, Perú.">
+<meta property="og:url" content="https://vivancompany.com/">
+<meta property="og:image" content="https://vivancompany.com/assets/vivan-co-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Vivancompany",
+  "legalName":"VIVANCOMPANY MC S.A.C.",
+  "alternateName":["Topito Supply","Vivan.co"],
+  "url":"https://vivancompany.com/",
+  "logo":"https://vivancompany.com/assets/vivan-co-logo.png",
+  "taxID":"20609532395",
+  "foundingDate":"2022-05-26",
+  "email":"contacto@vivancompany.com",
+  "address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},
+  "subOrganization":[
+    {"@type":"Organization","name":"Topito Supply","url":"https://vivancompany.com/topito/"},
+    {"@type":"Organization","name":"Vivan.co","url":"https://vivancompany.com/apps/"}
+  ]
+}
+</script>
 <style>
-:root{--ink:#22252a;--ink2:#4a4f57;--bg:#f3f2ee;--card:#fff;--line:#d9d7d0;--yel:#f5c400;--red:#c8281e;--max:1120px}
+:root{--ink:#0f1720;--ink2:#46505c;--paper:#f4f5f7;--line:#d5d9df;--red:#d0182b;--reddk:#8e101c;--blue:#38b6ff;--navy:#263151;--max:1120px}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font:400 1rem/1.6 Barlow,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
-h1,h2,h3,.brand{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:800;line-height:1.02;letter-spacing:.01em}
+html{scroll-behavior:smooth;scroll-padding-top:68px}
+body{font:400 1rem/1.6 "Instrument Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+h1,h2,h3,.brand{font-family:"Bricolage Grotesque","Arial",sans-serif;letter-spacing:-.02em;line-height:1.05}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-.btn{display:inline-block;border:2px solid var(--ink);background:var(--ink);color:#fff;font:600 1rem Barlow,sans-serif;padding:11px 22px;border-radius:4px;cursor:pointer;text-decoration:none;transition:background .15s,color .15s}
-.btn:hover{background:var(--yel);color:var(--ink)}
-.btn.alt{background:transparent;color:var(--ink)}
-.btn.alt:hover{background:var(--ink);color:#fff}
-.btn.wa{background:#1a7f43;border-color:#1a7f43}.btn.wa:hover{background:#13633a;color:#fff}
-header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:2px solid var(--ink)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
-.brand{font-size:1.7rem;text-decoration:none}.brand b{color:var(--red)}
-nav{display:flex;align-items:center;gap:22px;font-weight:500}
-nav a{text-decoration:none}nav a:hover{color:var(--red)}
-.cartbtn{position:relative;background:var(--yel);border:2px solid var(--ink);border-radius:4px;padding:7px 14px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--ink)}
-.cartbtn span{display:inline-block;min-width:22px;margin-left:6px;background:var(--ink);color:#fff;border-radius:11px;font-size:.8rem;text-align:center}
-@media(max-width:700px){nav .hide-s{display:none}nav{gap:14px}}
-.hero{padding:64px 0 56px}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.hero h1{font-size:clamp(2.8rem,7vw,5.2rem);margin-bottom:18px}
-.hero p{font-size:1.15rem;color:var(--ink2);max-width:46ch;margin-bottom:26px}
-.hero .act{display:flex;gap:12px;flex-wrap:wrap}
-.ticket{background:var(--card);border:2px solid var(--ink);border-radius:6px;padding:20px 22px;box-shadow:8px 8px 0 var(--ink)}
-.ticket h3{font-size:1.4rem;margin-bottom:10px}
-.ticket li{list-style:none;display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line)}
-.ticket li:last-child{border:0}.ticket b{font-weight:600}
-.ticket small{display:block;color:var(--ink2);margin-top:12px}
-.tape{height:14px;background:repeating-linear-gradient(-45deg,var(--yel) 0 14px,var(--ink) 14px 28px)}
-@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero{padding:40px 0}}
-@media(prefers-reduced-motion:no-preference){.hero .wrap>*{animation:in .6s ease both}.hero .wrap>*:last-child{animation-delay:.12s}@keyframes in{from{opacity:0;transform:translateY(14px)}}}
-section{padding:72px 0}
-.sec-h{margin-bottom:34px;max-width:60ch}
-.sec-h h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:10px}
-.sec-h p{color:var(--ink2)}
-.cos{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:20px}
-.co{background:var(--card);border:2px solid var(--ink);border-radius:6px;padding:26px}
-.co.main{background:var(--ink);color:#fff}.co.main p,.co.main li{color:#d8d9db}
-.co h3{font-size:1.7rem;margin-bottom:8px}
-.co p{color:var(--ink2);margin-bottom:12px}
-.co ul{padding-left:18px;font-size:.95rem;margin-bottom:18px;color:var(--ink2)}
-.co.main .btn{background:var(--yel);color:var(--ink);border-color:var(--yel)}
-@media(max-width:860px){.cos{grid-template-columns:1fr}}
-#tienda{background:var(--card);border-block:2px solid var(--ink)}
-.filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-bottom:24px}
-input,select,textarea{width:100%;font:inherit;padding:10px 12px;border:2px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink)}
-label{display:block;font-weight:600;margin-bottom:4px;font-size:.95rem}
-@media(max-width:640px){.filters{grid-template-columns:1fr}}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
-.prod{border:2px solid var(--line);border-radius:6px;padding:16px;display:flex;flex-direction:column;background:var(--bg)}
-.prod .ico{font-size:2.4rem;margin-bottom:6px}
-.prod h3{font-size:1.25rem;margin-bottom:4px}
-.prod p{font-size:.9rem;color:var(--ink2);text-transform:capitalize}
-.prod .row{margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;align-items:center}
-.prod .row strong{font:800 1.5rem "Barlow Condensed",sans-serif}
-.prod button{background:var(--ink);color:#fff;border:0;border-radius:4px;padding:8px 14px;font:600 .9rem Barlow,sans-serif;cursor:pointer}
-.prod button:hover{background:var(--red)}
-.empty{grid-column:1/-1;padding:30px;border:2px dashed var(--line);text-align:center;color:var(--ink2)}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.about p{margin-bottom:14px;max-width:60ch}
-.facts{display:grid;gap:14px}
-.fact{border-left:6px solid var(--yel);background:var(--card);padding:14px 18px}
-.fact b{display:block;font:800 1.35rem "Barlow Condensed",sans-serif}
-@media(max-width:760px){.about{grid-template-columns:1fr;gap:28px}}
-#contacto{background:var(--ink);color:#fff}
-#contacto .sec-h p{color:#c9cacd}
-.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
-.contact dl div{margin-bottom:18px}.contact dt{font-weight:600;color:var(--yel)}
-.contact label{color:#fff}
-form .f{margin-bottom:14px}
-#fmsg{margin-top:12px;color:var(--yel)}
-@media(max-width:760px){.contact{grid-template-columns:1fr}}
-footer{background:#14161a;color:#a9abb0;padding:28px 0;font-size:.9rem}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.drawer{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);background:var(--card);border-left:2px solid var(--ink);z-index:40;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column}
-.drawer.open{transform:none}
-.drawer header{position:static;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;height:auto}
-.drawer h2{font-size:1.6rem}
-.drawer .body{flex:1;overflow-y:auto;padding:16px 18px}
-.drawer .x{background:none;border:0;font-size:1.8rem;cursor:pointer;line-height:1}
-.item{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
-.qty{display:flex;align-items:center;gap:8px;margin-top:4px}
-.qty button{width:28px;height:28px;border:2px solid var(--ink);background:#fff;border-radius:4px;cursor:pointer;font-weight:700}
-.total{display:flex;justify-content:space-between;font:800 1.5rem "Barlow Condensed",sans-serif;margin:14px 0}
-.drawer form .f{margin-bottom:10px}
-.veil{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:30;display:none}.veil.open{display:block}
+header{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;text-decoration:none}
+.brand img{width:30px;height:30px;border-radius:7px}
+nav{display:flex;gap:22px;font-weight:500;font-size:.95rem}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:640px){nav .opt{display:none}nav{gap:16px}}
+
+.intro{padding:44px 0 28px}
+.intro h1{font-size:clamp(2.1rem,5.4vw,3.6rem);font-weight:800;max-width:18ch}
+.intro p{margin-top:14px;max-width:58ch;color:var(--ink2);font-size:1.1rem}
+
+.doors{display:flex;min-height:430px;border-block:1px solid var(--ink)}
+.door{flex:1;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:36px clamp(20px,4vw,56px);text-decoration:none;color:#fff;overflow:hidden;transition:flex .4s ease}
+.door:hover,.door:focus-visible{flex:1.35}
+.door.t{background:linear-gradient(160deg,var(--red) 0%,var(--reddk) 100%)}
+.door.v{background:var(--blue);color:var(--navy)}
+.door img{position:absolute;top:28px;right:28px;width:132px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.door.t img{transform:rotate(3deg)}
+.door h2{font-size:clamp(2rem,4.6vw,3.4rem);font-weight:800;margin-bottom:10px}
+.door p{max-width:34ch;font-size:1.05rem;margin-bottom:18px}
+.door .go{font-weight:600;border-bottom:2px solid currentColor;align-self:flex-start;padding-bottom:2px}
+.door.t::after{content:"";position:absolute;left:0;right:0;top:0;height:14px;background:repeating-linear-gradient(90deg,#fff 0 14px,#111 14px 28px);opacity:.9}
+@media(prefers-reduced-motion:no-preference){.door{animation:rise .6s ease both}.door.v{animation-delay:.1s}@keyframes rise{from{opacity:0;transform:translateY(16px)}}}
+@media(max-width:760px){.doors{flex-direction:column;min-height:0}.door{min-height:260px}.door:hover{flex:1}.door img{width:96px}}
+
+section{padding:64px 0}
+.two{display:grid;grid-template-columns:1fr 1.2fr;gap:48px}
+.two h2{font-size:clamp(1.8rem,3.6vw,2.5rem);font-weight:800}
+.two p{color:var(--ink2);margin-bottom:12px;max-width:62ch}
+@media(max-width:760px){.two{grid-template-columns:1fr;gap:20px}}
+.acts{display:grid;gap:0;border-top:1px solid var(--ink)}
+.act{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.act b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+.act span{color:var(--ink2)}
+@media(max-width:560px){.act{grid-template-columns:1fr;gap:2px}}
+
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact h2{font-size:clamp(1.8rem,3.6vw,2.5rem);font-weight:800;margin-bottom:12px}
+.contact p{color:var(--ink2);max-width:46ch}
+.ways a{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:500}
+.ways a:first-child{border-top:1px solid var(--ink)}
+.ways a:hover{background:#fff}
+.ways small{color:var(--ink2);font-weight:400}
+@media(max-width:760px){.contact{grid-template-columns:1fr;gap:24px}}
+
+footer{background:var(--ink);color:#b4bcc6;padding:34px 0;font-size:.92rem}
+footer .wrap{display:grid;gap:14px}
+footer b{color:#fff}
+footer .links{display:flex;gap:20px;flex-wrap:wrap}
+footer a:hover{color:#fff}
 </style>
 </head>
 <body>
-
 <header>
   <div class="wrap">
-    <!-- Para usar tu logo: reemplaza el texto por <img src="Logo/TU_ARCHIVO.png" alt="Vivancompany" height="36"> -->
-    <a class="brand" href="#inicio">Vivan<b>company</b></a>
+    <a class="brand" href="./"><img src="assets/favicon.svg" alt="" width="30" height="30">Vivancompany</a>
     <nav aria-label="Principal">
-      <a href="#empresas" class="hide-s">Empresas</a>
-      <a href="#tienda">Repuestos</a>
-      <a href="#nosotros" class="hide-s">Nosotros</a>
-      <a href="#contacto">Contacto</a>
-      <button class="cartbtn" id="openCart" aria-label="Abrir carrito">Carrito<span id="count">0</span></button>
+      <a href="topito/">Topito Supply</a>
+      <a href="apps/">Vivan.co</a>
+      <a href="#empresa" class="opt">Empresa</a>
+      <a href="#contacto" class="opt">Contacto</a>
     </nav>
   </div>
 </header>
 
 <main>
-<section class="hero" id="inicio">
-  <div class="wrap">
-    <div>
-      <h1>Repuestos y taller para tu moto</h1>
-      <p>Topito Biker te ayuda a mantener tu moto en marcha: repuestos para Yamaha, Honda, Kawasaki, Suzuki y Bajaj, con asesoría técnica y pedido directo por WhatsApp.</p>
-      <div class="act">
-        <a class="btn" href="#tienda">Ver repuestos</a>
-        <a class="btn alt" href="#contacto">Hablar con nosotros</a>
+  <div class="wrap intro">
+    <h1>Dos empresas, una misma gestión desde Lima</h1>
+    <p>Vivancompany MC S.A.C. vende y da servicio a motocicletas a través de Topito Supply, y desarrolla aplicaciones y software a medida a través de Vivan.co.</p>
+  </div>
+
+  <div class="doors">
+    <a class="door t" href="topito/">
+      <img src="assets/topito-logo.jpg" alt="Logo de Topito Supply" width="132" height="132">
+      <h2>Topito Supply</h2>
+      <p>Repuestos, accesorios y taller para motos. Arma tu pedido en línea.</p>
+      <span class="go">Ver catálogo</span>
+    </a>
+    <a class="door v" href="apps/">
+      <img src="assets/vivan-co-icon.png" alt="Logo de Vivan.co" width="132" height="128">
+      <h2>Vivan.co</h2>
+      <p>Aplicaciones móviles, web y software a medida para empresas.</p>
+      <span class="go">Conocer servicios</span>
+    </a>
+  </div>
+
+  <section id="empresa">
+    <div class="wrap two">
+      <h2>Qué hace Vivancompany</h2>
+      <div>
+        <p>Somos una sociedad anónima cerrada peruana, inscrita en SUNAT desde mayo de 2022 y con actividades desde junio de 2022. Emitimos factura y boleta electrónica.</p>
+        <div class="acts">
+          <div class="act"><b>Motocicletas</b><span>Venta, mantenimiento y reparación de motocicletas, partes, piezas y accesorios.</span></div>
+          <div class="act"><b>Comercio</b><span>Venta al por mayor y al por menor de productos.</span></div>
+          <div class="act"><b>Comercio exterior</b><span>Registrados como importador y exportador.</span></div>
+          <div class="act"><b>Tecnología</b><span>Aplicaciones y software a medida bajo la marca Vivan.co.</span></div>
+        </div>
       </div>
     </div>
-    <aside class="ticket" aria-label="Algunos repuestos">
-      <h3>Más pedidos</h3>
-      <ul id="ticket"></ul>
-      <small>Precios en soles. Confirma stock por WhatsApp.</small>
-    </aside>
-  </div>
-</section>
-<div class="tape" aria-hidden="true"></div>
+  </section>
 
-<section id="empresas">
-  <div class="wrap">
-    <div class="sec-h"><h2>Las empresas de Vivancompany</h2><p>Un grupo con tres líneas de trabajo. Topito Biker es la que atiende al público todos los días.</p></div>
-    <div class="cos">
-      <article class="co main">
-        <h3>Topito Biker</h3>
-        <p>Servicios y repuestos para motocicletas.</p>
-        <ul><li>Mantenimiento preventivo</li><li>Reparaciones especializadas</li><li>Venta de repuestos</li><li>Asesoría técnica</li></ul>
-        <a class="btn" href="#tienda">Ver repuestos</a>
-      </article>
-      <article class="co">
-        <h3>Soluciones Empresariales</h3>
-        <p>Consultoría y tecnología a medida para tu negocio.</p>
-        <ul><li>Consultoría estratégica</li><li>Desarrollo de software</li><li>Automatización de procesos</li></ul>
-        <a class="btn alt" href="#contacto" data-svc="Soluciones Empresariales">Consultar</a>
-      </article>
-      <article class="co">
-        <h3>Expansión Internacional</h3>
-        <p>Acompañamos a empresas que quieren vender fuera del país.</p>
-        <ul><li>Análisis de mercados</li><li>Estrategias de entrada</li><li>Alianzas comerciales</li></ul>
-        <a class="btn alt" href="#contacto" data-svc="Expansión Internacional">Consultar</a>
-      </article>
+  <section id="contacto">
+    <div class="wrap contact">
+      <div>
+        <h2>Contacto</h2>
+        <p>Escríbenos al área que corresponda y te respondemos en horario laboral.</p>
+      </div>
+      <div class="ways">
+        <a href="mailto:ventas@vivancompany.com?subject=Consulta%20de%20repuestos"><span>Repuestos y taller (Topito Supply)<br><small>ventas@vivancompany.com</small></span><span>Escribir</span></a>
+        <a href="mailto:contacto@vivancompany.com?subject=Proyecto%20de%20aplicaci%C3%B3n"><span>Apps y software (Vivan.co)<br><small>contacto@vivancompany.com</small></span><span>Escribir</span></a>
+      </div>
     </div>
-  </div>
-</section>
-
-<section id="tienda">
-  <div class="wrap">
-    <div class="sec-h"><h2>Repuestos Topito Biker</h2><p>Agrega lo que necesitas al carrito y envía tu pedido por WhatsApp. Te confirmamos stock, envío y forma de pago.</p></div>
-    <div class="filters">
-      <div><label for="q">Buscar</label><input id="q" type="search" placeholder="Ej. filtro, bujía, freno"></div>
-      <div><label for="cat">Categoría</label><select id="cat"><option value="">Todas</option></select></div>
-      <div><label for="mar">Marca</label><select id="mar"><option value="">Todas</option></select></div>
-    </div>
-    <div class="grid" id="grid" aria-live="polite"></div>
-  </div>
-</section>
-
-<section id="nosotros">
-  <div class="wrap about">
-    <div>
-      <div class="sec-h"><h2>Quiénes somos</h2></div>
-      <p>Vivancompany reúne varias empresas bajo una misma gestión. Empezamos con Topito Biker, el taller y la tienda de repuestos para motos, y desde ahí sumamos servicios para otras empresas.</p>
-      <p>Trabajamos con trato directo: escríbenos, cuéntanos qué necesitas y te respondemos con precio y plazo.</p>
-    </div>
-    <div class="facts">
-      <div class="fact"><b>Topito Biker</b>Taller y repuestos para motos</div>
-      <div class="fact"><b>Soluciones Empresariales</b>Software y consultoría</div>
-      <div class="fact"><b>Expansión Internacional</b>Mercados y alianzas</div>
-    </div>
-  </div>
-</section>
-
-<section id="contacto">
-  <div class="wrap">
-    <div class="sec-h"><h2>Escríbenos</h2><p>El mensaje se abre en WhatsApp, listo para enviar.</p></div>
-    <div class="contact">
-      <dl>
-        <div><dt>WhatsApp</dt><dd id="waText"></dd></div>
-        <div><dt>Correo</dt><dd id="mailText"></dd></div>
-        <div><dt>Dirección</dt><dd>Lima, Perú</dd></div>
-      </dl>
-      <form id="cf">
-        <div class="f"><label for="n">Nombre</label><input id="n" required autocomplete="name"></div>
-        <div class="f"><label for="s">Qué necesitas</label>
-          <select id="s"><option>Topito Biker (taller o repuestos)</option><option>Soluciones Empresariales</option><option>Expansión Internacional</option><option>Otro</option></select></div>
-        <div class="f"><label for="m">Mensaje</label><textarea id="m" rows="4" required></textarea></div>
-        <button class="btn wa" type="submit">Enviar por WhatsApp</button>
-        <p id="fmsg" role="status"></p>
-      </form>
-    </div>
-  </div>
-</section>
+  </section>
 </main>
 
-<footer><div class="wrap"><span>&copy; <span id="yr"></span> Vivancompany. Todos los derechos reservados.</span><span>Topito Biker · Soluciones Empresariales · Expansión Internacional</span></div></footer>
-
-<div class="veil" id="veil"></div>
-<aside class="drawer" id="drawer" aria-label="Carrito" aria-hidden="true">
-  <header><h2>Tu pedido</h2><button class="x" id="closeCart" aria-label="Cerrar carrito">&times;</button></header>
-  <div class="body">
-    <div id="items"></div>
-    <div class="total"><span>Total</span><span id="total">S/ 0</span></div>
-    <form id="of">
-      <div class="f"><label for="on">Nombre</label><input id="on" required autocomplete="name"></div>
-      <div class="f"><label for="op">Teléfono</label><input id="op" type="tel" required autocomplete="tel"></div>
-      <div class="f"><label for="oa">Distrito o dirección de entrega</label><input id="oa" required autocomplete="street-address"></div>
-      <button class="btn wa" type="submit" style="width:100%">Pedir por WhatsApp</button>
-    </form>
+<footer>
+  <div class="wrap">
+    <div><b>VIVANCOMPANY MC S.A.C.</b> &middot; RUC 20609532395<br>Lima, Perú</div>
+    <div class="links"><a href="topito/">Topito Supply</a><a href="apps/">Vivan.co</a><a href="privacidad/">Política de privacidad</a><a href="terminos/">Términos y condiciones</a></div>
+    <div>&copy; <span id="yr">2026</span> Vivancompany MC S.A.C. Todos los derechos reservados.</div>
   </div>
-</aside>
-
-<script>
-// === EDITA AQUÍ TUS DATOS REALES ===
-const CONFIG = { whatsapp: "51999999999", email: "contacto@vivancompany.com" };
-// ===================================
-
-const productos = [
-  {id:1,nombre:"Filtro de aceite",categoria:"motor",marca:"yamaha",precio:35,img:"🔧"},
-  {id:2,nombre:"Pastillas de freno",categoria:"frenos",marca:"honda",precio:65,img:"🛑"},
-  {id:3,nombre:"Amortiguador trasero",categoria:"suspensión",marca:"kawasaki",precio:180,img:"🔩"},
-  {id:4,nombre:"Batería 12V",categoria:"eléctrico",marca:"suzuki",precio:120,img:"🔋"},
-  {id:5,nombre:"Espejo retrovisor",categoria:"carrocería",marca:"bajaj",precio:50,img:"🪞"},
-  {id:6,nombre:"Cadena de transmisión",categoria:"motor",marca:"yamaha",precio:95,img:"⛓️"},
-  {id:7,nombre:"Disco de freno",categoria:"frenos",marca:"honda",precio:135,img:"⚙️"},
-  {id:8,nombre:"Bujía NGK",categoria:"motor",marca:"kawasaki",precio:22,img:"⚡"},
-  {id:9,nombre:"Faro LED",categoria:"eléctrico",marca:"suzuki",precio:85,img:"💡"},
-  {id:10,nombre:"Llanta trasera",categoria:"carrocería",marca:"bajaj",precio:220,img:"🛞"},
-  {id:11,nombre:"Aceite motor 10W-40",categoria:"motor",marca:"yamaha",precio:45,img:"🛢️"},
-  {id:12,nombre:"Kit de embrague",categoria:"motor",marca:"honda",precio:290,img:"🔧"}
-];
-const $ = id => document.getElementById(id);
-const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
-const wa = text => "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(text);
-let cart = {};
-
-// Datos fijos
-$("yr").textContent = new Date().getFullYear();
-$("waText").textContent = "+" + CONFIG.whatsapp;
-$("mailText").textContent = CONFIG.email;
-$("ticket").innerHTML = [8,1,2,11].map(id => {
-  const p = productos.find(x => x.id === id);
-  return `<li><span>${p.img} ${esc(p.nombre)}</span><b>S/ ${p.precio}</b></li>`;
-}).join("");
-
-// Filtros
-[...new Set(productos.map(p => p.categoria))].forEach(c => $("cat").add(new Option(cap(c), c)));
-[...new Set(productos.map(p => p.marca))].forEach(m => $("mar").add(new Option(cap(m), m)));
-["q","cat","mar"].forEach(id => $(id).addEventListener("input", render));
-
-function render() {
-  const q = $("q").value.trim().toLowerCase(), c = $("cat").value, m = $("mar").value;
-  const list = productos.filter(p => p.nombre.toLowerCase().includes(q) && (!c || p.categoria === c) && (!m || p.marca === m));
-  $("grid").innerHTML = list.length ? list.map(p => `
-    <article class="prod">
-      <div class="ico" aria-hidden="true">${p.img}</div>
-      <h3>${esc(p.nombre)}</h3>
-      <p>${esc(p.marca)} · ${esc(p.categoria)}</p>
-      <div class="row"><strong>S/ ${p.precio}</strong><button data-add="${p.id}">Agregar</button></div>
-    </article>`).join("") : `<p class="empty">No encontramos repuestos con esos filtros. Prueba otra búsqueda o pídelo por WhatsApp.</p>`;
-}
-$("grid").addEventListener("click", e => {
-  const id = e.target.dataset.add;
-  if (id) { cart[id] = (cart[id] || 0) + 1; renderCart(); }
-});
-
-// Carrito
-function renderCart() {
-  const ids = Object.keys(cart);
-  let total = 0, n = 0;
-  $("items").innerHTML = ids.length ? ids.map(id => {
-    const p = productos.find(x => x.id == id), q = cart[id];
-    total += p.precio * q; n += q;
-    return `<div class="item"><div><strong>${esc(p.nombre)}</strong>
-      <div class="qty"><button data-dec="${id}" aria-label="Quitar uno">−</button>${q}<button data-inc="${id}" aria-label="Agregar uno">+</button></div></div>
-      <strong>S/ ${p.precio * q}</strong></div>`;
-  }).join("") : `<p class="empty">Tu carrito está vacío. Agrega repuestos desde la tienda.</p>`;
-  $("total").textContent = "S/ " + total;
-  $("count").textContent = n;
-}
-$("items").addEventListener("click", e => {
-  const d = e.target.dataset;
-  if (d.inc) cart[d.inc]++;
-  if (d.dec && --cart[d.dec] <= 0) delete cart[d.dec];
-  renderCart();
-});
-function toggle(open) {
-  $("drawer").classList.toggle("open", open);
-  $("veil").classList.toggle("open", open);
-  $("drawer").setAttribute("aria-hidden", !open);
-}
-$("openCart").onclick = () => toggle(true);
-$("closeCart").onclick = $("veil").onclick = () => toggle(false);
-document.addEventListener("keydown", e => e.key === "Escape" && toggle(false));
-
-$("of").addEventListener("submit", e => {
-  e.preventDefault();
-  const ids = Object.keys(cart);
-  if (!ids.length) { alert("Agrega al menos un repuesto al carrito."); return; }
-  let total = 0;
-  const lines = ids.map(id => {
-    const p = productos.find(x => x.id == id); total += p.precio * cart[id];
-    return `• ${cart[id]} x ${p.nombre} (S/ ${p.precio * cart[id]})`;
-  });
-  const msg = `Hola Topito Biker, quiero hacer este pedido:\n${lines.join("\n")}\nTotal: S/ ${total}\n\nNombre: ${$("on").value}\nTeléfono: ${$("op").value}\nEntrega: ${$("oa").value}`;
-  window.open(wa(msg), "_blank", "noopener");
-});
-
-// Contacto
-document.querySelectorAll("[data-svc]").forEach(a => a.addEventListener("click", () => {
-  [...$("s").options].forEach(o => { if (o.text === a.dataset.svc) $("s").value = o.value; });
-}));
-$("cf").addEventListener("submit", e => {
-  e.preventDefault();
-  window.open(wa(`Hola, soy ${$("n").value}. Me interesa: ${$("s").value}.\n${$("m").value}`), "_blank", "noopener");
-  $("fmsg").textContent = "Se abrió WhatsApp con tu mensaje. Solo falta enviarlo.";
-});
-
-render(); renderCart();
-</script>
+</footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
 </body>
 </html>
