@@ -130,6 +130,26 @@ footer .links{display:flex;gap:20px;flex-wrap:wrap}
 .done .out .btn{text-align:center}
 .veil{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:30;display:none}.veil.open{display:block}
 @media(prefers-reduced-motion:reduce){.drawer{transition:none}}
+
+.hero .bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease;z-index:0}
+.hero.hasvideo .bgv{opacity:.55}
+.hero.hasvideo .bike{opacity:0;pointer-events:none;position:absolute}
+.hero .shade{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(10,10,12,.92) 0%,rgba(10,10,12,.55) 55%,rgba(10,10,12,.25) 100%);display:none}
+.hero.hasvideo .shade{display:block}
+.hero.hasvideo .wrap{grid-template-columns:1fr}
+.hero.hasvideo h1{text-shadow:0 4px 24px rgba(0,0,0,.6)}
+.vctl{position:absolute;right:16px;bottom:16px;z-index:2;display:none;background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 14px;font:600 .8rem "Barlow Semi Condensed",sans-serif;cursor:pointer}
+.hero.hasvideo .vctl{display:block}
+@media(prefers-reduced-motion:no-preference){
+.hero .bike{animation:ride .9s cubic-bezier(.15,.8,.2,1) both,idle 4s 1s ease-in-out infinite alternate}
+@keyframes idle{to{transform:translateY(-8px)}}
+.hero .brands span{animation:none}
+}
+
+@media(prefers-reduced-motion:no-preference){
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
@@ -156,7 +176,9 @@ footer .links{display:flex;gap:20px;flex-wrap:wrap}
 </header>
 
 <main>
-<section class="hero">
+<section class="hero" id="hero">
+  <video class="bgv" id="bgv" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+  <div class="shade"></div>
   <div class="wrap">
     <div>
       <h1>Repuestos<br>para <em>correr</em></h1>
@@ -169,6 +191,7 @@ footer .links{display:flex;gap:20px;flex-wrap:wrap}
     </div>
     <img class="bike" src="../assets/moto-carrera.svg" alt="Ilustración de una moto de carrera con piloto" width="900" height="330">
   </div>
+  <button class="vctl" id="vctl" type="button" aria-label="Pausar video de fondo">Pausar video</button>
 </section>
 <div class="chk" aria-hidden="true"></div>
 
@@ -335,6 +358,37 @@ $("of").addEventListener("submit",e=>{
   $("ordertxt").focus();
 });
 render();renderCart();
+</script>
+
+<script>
+// Video de fondo del hero: coloca tu archivo en assets/moto.mp4 (opcional: assets/moto.webm). Si no existe, se muestra la ilustración.
+(function(){
+  var hero=document.getElementById("hero"),v=document.getElementById("bgv"),b=document.getElementById("vctl");
+  var rm=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var saver=navigator.connection&&navigator.connection.saveData;
+  if(rm||saver)return;
+  v.innerHTML='<source src="../assets/moto.webm" type="video/webm"><source src="../assets/moto.mp4" type="video/mp4">';
+  v.addEventListener("loadeddata",function(){hero.classList.add("hasvideo");v.play().catch(function(){});});
+  v.load();
+  b.addEventListener("click",function(){if(v.paused){v.play();b.textContent="Pausar video";}else{v.pause();b.textContent="Reproducir video";}});
+})();
+</script>
+
+<script>
+(function(){
+  var rm=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(rm||!("IntersectionObserver" in window))return;
+  document.documentElement.classList.add("js");
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.15});
+  function scan(){
+    document.querySelectorAll(".sec-h, section h2, .prod, .step, .tcard, #taller .wrap > *, #pedir .wrap > *").forEach(function(el,i){
+      if(el.dataset.rv)return; el.dataset.rv=1; el.classList.add("rv");
+      el.style.setProperty("--d",((i%4)*0.08)+"s"); io.observe(el);
+    });
+  }
+  scan();
+  var g=document.getElementById("grid"); if(g)new MutationObserver(scan).observe(g,{childList:true});
+})();
 </script>
 </body>
 </html>

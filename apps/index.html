@@ -134,6 +134,22 @@ footer{background:#1b233b;color:#aab6d6;padding:32px 0;font-size:.92rem}
 footer .wrap{display:grid;gap:12px}
 footer b{color:#fff}footer a:hover{color:#fff}
 footer .links{display:flex;gap:20px;flex-wrap:wrap}
+
+.code .cur{display:inline-block;width:7px;height:1em;background:#9fffec;vertical-align:-2px;margin-left:2px}
+.glow{position:absolute;border-radius:50%;filter:blur(40px);opacity:.5;pointer-events:none}
+@media(prefers-reduced-motion:no-preference){
+.code .cur{animation:blink 1s steps(2) infinite}@keyframes blink{50%{opacity:0}}
+.phone{animation:float 6s ease-in-out infinite}@keyframes float{50%{transform:translateY(-10px)}}
+.win{animation:float 7s 1s ease-in-out infinite reverse}
+.tags span,.hero .tags *{transition:transform .2s}
+.row,.step{transition:background .25s}
+.row:hover{background:var(--soft)}
+}
+
+@media(prefers-reduced-motion:no-preference){
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
@@ -176,7 +192,7 @@ footer .links{display:flex;gap:20px;flex-wrap:wrap}
         <div class="bars"><i style="--h:42%;--i:0"></i><i style="--h:64%;--i:1"></i><i style="--h:88%;--i:2"></i><i style="--h:56%;--i:3"></i><i style="--h:72%;--i:4"></i></div>
         <ul class="lst"><li><span class="d"></span>Pedido 2041<em>Entregado</em></li><li><span class="d w"></span>Pedido 2042<em>En ruta</em></li><li><span class="d"></span>Pedido 2043<em>Entregado</em></li></ul>
       </div></div>
-      <div class="code"><span class="c3">const</span> pedido = <span class="c3">await</span> api.<span class="c1">enviar</span>({<br>&nbsp;&nbsp;estado: <span class="c2">"entregado"</span>,<br>&nbsp;&nbsp;sincronizado: <span class="c1">true</span><br>});</div>
+      <div class="code"><span class="c3">const</span> pedido = <span class="c3">await</span> api.<span class="c1">enviar</span>({<br>&nbsp;&nbsp;estado: <span class="c2">"entregado"</span>,<br>&nbsp;&nbsp;sincronizado: <span class="c1">true</span><br>}); <span class="cur"></span></div>
     </div>
   </div>
 </section>
@@ -252,6 +268,36 @@ document.getElementById("cf").addEventListener("submit",function(e){
   window.location.href="mailto:contacto@vivancompany.com?subject="+encodeURIComponent(s)+"&body="+encodeURIComponent(b);
   document.getElementById("fmsg").textContent="Se abrió tu aplicación de correo con el mensaje listo. Solo falta enviarlo.";
 });
+</script>
+
+<script>
+// Contadores animados en el panel de ejemplo
+(function(){
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  document.querySelectorAll(".win .k b, .kp b").forEach(function(el){
+    var m=el.textContent.match(/^(\d+)(%?)$/); if(!m)return;
+    var end=+m[1],suf=m[2],t0=null;
+    function step(ts){t0=t0||ts;var p=Math.min((ts-t0)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(step);}
+    el.textContent="0"+suf; requestAnimationFrame(step);
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var rm=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(rm||!("IntersectionObserver" in window))return;
+  document.documentElement.classList.add("js");
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.15});
+  function scan(){
+    document.querySelectorAll(".sec-h, .row, .step, #nosotros .wrap > *, #soporte .wrap > *").forEach(function(el,i){
+      if(el.dataset.rv)return; el.dataset.rv=1; el.classList.add("rv");
+      el.style.setProperty("--d",((i%4)*0.08)+"s"); io.observe(el);
+    });
+  }
+  scan();
+  var g=document.getElementById("grid"); if(g)new MutationObserver(scan).observe(g,{childList:true});
+})();
 </script>
 </body>
 </html>
