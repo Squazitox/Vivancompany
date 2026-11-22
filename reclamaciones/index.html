@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Libro de Reclamaciones | Vivancompany MC S.A.C.</title>
+<meta name="description" content="Libro de Reclamaciones virtual de Vivancompany MC S.A.C. (Topito Supply y Vivan.co), conforme al Código de Protección y Defensa del Consumidor.">
+<link rel="canonical" href="https://vivancompany.com/reclamaciones/">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f1720;--ink2:#46505c;--paper:#f4f5f7;--line:#d5d9df}
+*{box-sizing:border-box;margin:0}
+body{font:400 1.02rem/1.7 "Instrument Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid #2aa5f2;outline-offset:2px}
+header{border-bottom:1px solid var(--line)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1120px}
+.brand{display:flex;align-items:center;gap:10px;font:800 1.15rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+.brand img{width:30px;height:30px}
+main{padding:44px 20px 64px}
+h1{font:800 clamp(2rem,5vw,2.8rem)/1.05 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;margin-bottom:6px}
+.upd{color:var(--ink2);margin-bottom:28px}
+h2{font:700 1.35rem "Bricolage Grotesque",sans-serif;margin:30px 0 8px}
+h3{font:700 1.08rem "Bricolage Grotesque",sans-serif;margin:18px 0 4px}
+p,li{color:#2a323c;margin-bottom:10px}
+ul{margin:0 0 10px 22px}
+fieldset{border:1px solid var(--line);border-radius:10px;padding:18px 18px 8px;margin:0 0 18px;background:#fff}
+legend{font:700 1.05rem "Bricolage Grotesque",sans-serif;padding:0 6px}
+label{display:block;font-weight:500;margin-bottom:12px}
+label small{display:block;color:var(--ink2);font-weight:400}
+input,select,textarea{display:block;width:100%;margin-top:4px;padding:10px 12px;border:1px solid #b9c0c9;border-radius:8px;font:inherit;background:#fff}
+textarea{min-height:110px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.radio{display:flex;gap:10px;align-items:flex-start;font-weight:400}
+.radio input,.check input{width:auto;margin-top:6px}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400}
+.box{background:#fff;border-left:4px solid #d0182b;padding:14px 16px;border-radius:6px;margin:0 0 22px}
+.box p{margin:0 0 4px}
+button{font:600 1rem "Instrument Sans",sans-serif;background:#0f1720;color:#fff;border:0;border-radius:8px;padding:12px 22px;cursor:pointer}
+button.sec{background:#fff;color:#0f1720;border:1px solid #0f1720}
+.done{display:none;background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px}
+.done.on{display:block}
+@media print{header,footer,form,.noprint{display:none!important}.done{display:block;border:0}}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--ink2);font-size:.92rem}
+footer .wrap{display:flex;gap:20px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="../"><img src="../assets/favicon.svg" alt="" width="30" height="30">Vivancompany</a><a href="../">Volver al inicio</a></div></header>
+<main class="wrap">
+<h1>Libro de Reclamaciones</h1>
+<p class="upd">Conforme al Código de Protección y Defensa del Consumidor (Ley N.° 29571)</p>
+
+<div class="box">
+<p><strong>VIVANCOMPANY MC S.A.C.</strong> &middot; RUC 20609532395</p>
+<p>Marcas: Topito Supply y Vivan.co &middot; Lima, Perú</p>
+<p>Correo: <a href="mailto:ventas@vivancompany.com">ventas@vivancompany.com</a></p>
+</div>
+
+<p><strong>Reclamo:</strong> disconformidad con los productos o servicios adquiridos. <strong>Queja:</strong> malestar o descontento con la atención al público, que no está relacionado con los productos o servicios.</p>
+<p>Responderemos en un plazo máximo de <strong>15 días hábiles</strong>. Presentar un reclamo no impide acudir a otras vías de solución de controversias ni es un requisito previo para presentar una denuncia ante el INDECOPI.</p>
+
+<form id="lr" novalidate>
+<fieldset>
+<legend>1. Identificación del consumidor</legend>
+<label>Nombres y apellidos *<input name="nombre" required autocomplete="name"></label>
+<div class="row">
+<label>Tipo de documento *<select name="tipodoc" required><option>DNI</option><option>Carné de extranjería</option><option>Pasaporte</option><option>RUC</option></select></label>
+<label>Número de documento *<input name="documento" required inputmode="numeric"></label>
+</div>
+<label>Domicilio *<input name="domicilio" required autocomplete="street-address"></label>
+<div class="row">
+<label>Teléfono *<input name="telefono" required type="tel" autocomplete="tel"></label>
+<label>Correo electrónico *<input name="correo" required type="email" autocomplete="email"></label>
+</div>
+<label class="check"><input type="checkbox" name="menor" id="menor"> Soy menor de edad</label>
+<label id="apoderado" hidden>Nombre del padre, madre o apoderado<input name="apoderado"></label>
+</fieldset>
+
+<fieldset>
+<legend>2. Identificación del bien contratado</legend>
+<div class="row">
+<label>Tipo *<select name="bien" required><option>Producto</option><option>Servicio</option></select></label>
+<label>Monto reclamado (S/)<input name="monto" inputmode="decimal" placeholder="0.00"></label>
+</div>
+<label>Marca o línea *<select name="marca" required><option>Topito Supply (repuestos, accesorios y taller)</option><option>Vivan.co (aplicaciones y software)</option></select></label>
+<label>Descripción del producto o servicio *<input name="descripcion" required></label>
+<div class="row">
+<label>N.° de pedido o comprobante<small>Opcional</small><input name="pedido"></label>
+<label>Fecha de compra<small>Opcional</small><input name="fechacompra" type="date"></label>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>3. Detalle de la reclamación</legend>
+<label class="radio"><input type="radio" name="tipo" value="Reclamo" required checked> <span><b>Reclamo</b><small>Disconformidad con el producto o servicio</small></span></label>
+<label class="radio"><input type="radio" name="tipo" value="Queja"> <span><b>Queja</b><small>Malestar con la atención recibida</small></span></label>
+<label>Detalle *<textarea name="detalle" required></textarea></label>
+<label>Pedido del consumidor *<small>Qué solución esperas</small><textarea name="solicitud" required></textarea></label>
+</fieldset>
+
+<label class="check"><input type="checkbox" name="acepto" required> <span>Declaro que los datos son verdaderos y acepto que VIVANCOMPANY MC S.A.C. los use para atender este reclamo, según su <a href="../privacidad/">política de privacidad</a>. *</span></label>
+<p id="err" style="color:#b00020"></p>
+<button type="submit">Enviar reclamación</button>
+</form>
+
+<div class="done" id="done">
+<h2 style="margin-top:0">Hoja de reclamación <span id="cod"></span></h2>
+<p id="msg"></p>
+<pre id="hoja" style="white-space:pre-wrap;font:inherit;background:#f4f5f7;padding:14px;border-radius:8px"></pre>
+<p class="noprint" style="display:flex;gap:10px;flex-wrap:wrap"><button type="button" onclick="window.print()">Imprimir o guardar en PDF</button><a id="mail" class="noprint" href="#"><button type="button" class="sec">Enviar por correo</button></a></p>
+</div>
+</main>
+<script>
+// Para recibir los reclamos automáticamente, crea un formulario en un servicio
+// como Formspree y pega aquí su URL (por ejemplo "https://formspree.io/f/xxxx").
+// Si se deja vacío, el reclamo se envía con la aplicación de correo del cliente.
+const FORM_ENDPOINT = "https://formspree.io/f/xnpdgjap";
+const DESTINO = "ventas@vivancompany.com";
+
+const f=document.getElementById("lr");
+document.getElementById("menor").addEventListener("change",e=>{document.getElementById("apoderado").hidden=!e.target.checked});
+f.addEventListener("submit",async e=>{
+  e.preventDefault();
+  const err=document.getElementById("err");
+  if(!f.checkValidity()){err.textContent="Completa los campos obligatorios (*) y acepta la declaración.";f.reportValidity();return}
+  err.textContent="";
+  const d=Object.fromEntries(new FormData(f));
+  const now=new Date();
+  const p=n=>String(n).padStart(2,"0");
+  const cod="LR-"+now.getFullYear()+p(now.getMonth()+1)+p(now.getDate())+"-"+p(now.getHours())+p(now.getMinutes())+p(now.getSeconds());
+  const fecha=now.toLocaleString("es-PE",{timeZone:"America/Lima"});
+  const hoja=`HOJA DE RECLAMACIÓN ${cod}
+Fecha: ${fecha}
+Proveedor: VIVANCOMPANY MC S.A.C. - RUC 20609532395 - Lima, Perú
+
+1. CONSUMIDOR
+Nombre: ${d.nombre}
+Documento: ${d.tipodoc} ${d.documento}
+Domicilio: ${d.domicilio}
+Teléfono: ${d.telefono}
+Correo: ${d.correo}${d.menor?"\nMenor de edad. Padre, madre o apoderado: "+(d.apoderado||"-"):""}
+
+2. BIEN CONTRATADO
+Tipo: ${d.bien} - ${d.marca}
+Descripción: ${d.descripcion}
+Monto reclamado: S/ ${d.monto||"-"}
+Pedido o comprobante: ${d.pedido||"-"}  Fecha de compra: ${d.fechacompra||"-"}
+
+3. DETALLE
+Tipo: ${d.tipo}
+Detalle: ${d.detalle}
+Pedido del consumidor: ${d.solicitud}
+
+Plazo de respuesta: máximo 15 días hábiles.`;
+  const asunto=`Libro de Reclamaciones ${cod} - ${d.tipo}`;
+  const mailto=`mailto:${DESTINO}?cc=${encodeURIComponent(d.correo)}&subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(hoja)}`;
+  let enviado=false;
+  if(FORM_ENDPOINT){
+    try{
+      const r=await fetch(FORM_ENDPOINT,{method:"POST",headers:{"Accept":"application/json","Content-Type":"application/json"},body:JSON.stringify({...d,codigo:cod,fecha,_subject:asunto,_replyto:d.correo,hoja})});
+      enviado=r.ok;
+    }catch(x){}
+  }
+  document.getElementById("cod").textContent=cod;
+  document.getElementById("hoja").textContent=hoja;
+  document.getElementById("mail").href=mailto;
+  document.getElementById("msg").textContent=enviado
+    ?"Recibimos tu reclamación. Guarda o imprime esta hoja como constancia; te responderemos a "+d.correo+" en un plazo máximo de 15 días hábiles."
+    :"Para completar el registro, envía esta hoja con el botón \"Enviar por correo\" (recibirás una copia) y guárdala o imprímela como constancia.";
+  f.style.display="none";
+  document.getElementById("done").classList.add("on");
+  if(!enviado) location.href=mailto;
+  window.scrollTo(0,0);
+});
+</script>
+
+<footer><div class="wrap"><span>VIVANCOMPANY MC S.A.C. &middot; RUC 20609532395</span><a href="../soporte/">Soporte</a><a href="../privacidad/">Política de privacidad</a><a href="../terminos/">Términos y condiciones</a><a href="../reclamaciones/">Libro de Reclamaciones</a></div></footer>
+</body>
+</html>
