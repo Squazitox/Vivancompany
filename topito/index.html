@@ -150,6 +150,38 @@ footer .links{display:flex;gap:20px;flex-wrap:wrap}
 .js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
 .js .rv.in{opacity:1;transform:none}
 }
+
+#explora{background:#0d0e12;padding:64px 0 56px;border-block:1px solid #22252d}
+#explora .sec-t{margin-bottom:6px}
+#explora .lead{color:var(--gr);max-width:60ch;margin-bottom:22px}
+.v3d{display:grid;grid-template-columns:1fr 300px;gap:18px;align-items:start}
+.tabs3d{display:flex;gap:8px;margin-bottom:12px;grid-column:1/-1}
+.tab3d{background:#171920;color:#d7dbe3;border:1px solid #2c303a;padding:9px 20px;font:700 .95rem "Barlow Semi Condensed",sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.tab3d[aria-selected=true]{background:var(--red);color:#fff;border-color:var(--red)}
+.stage3d{position:relative;height:520px;background:radial-gradient(ellipse at 50% 70%,#2a2e39 0%,#0d0e12 70%);border:1px solid #22252d;overflow:hidden;touch-action:pan-y}
+.stage3d canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:pan-y}
+.stage3d canvas:active{cursor:grabbing}
+.dots3d{position:absolute;inset:0;pointer-events:none}
+.dot3d{position:absolute;left:0;top:0;pointer-events:auto;width:26px;height:26px;border-radius:50%;border:2px solid #fff;background:var(--red);color:#fff;font:700 .78rem/1 "Barlow Semi Condensed",sans-serif;cursor:pointer;box-shadow:0 0 0 0 rgba(208,24,43,.7)}
+.dot3d.on{background:#fff;color:var(--red)}
+.hint3d{position:absolute;left:12px;bottom:10px;color:#8b93a1;font-size:.8rem;pointer-events:none}
+.side3d{display:flex;flex-direction:column;gap:12px}
+.pcard{background:#171920;border-top:4px solid var(--red);padding:16px}
+.pcard .pn{font:800 1.3rem "Racing Sans One","Barlow Semi Condensed",sans-serif;letter-spacing:.02em}
+.pcard .pm{color:var(--gr);font-size:.9rem;margin:2px 0 10px;text-transform:capitalize}
+.pcard .pp{font:800 1.8rem "Barlow Semi Condensed",sans-serif;color:#fff;margin-bottom:10px}
+.pcard .pa{background:var(--red);color:#fff;border:0;padding:10px 18px;font:700 .95rem "Barlow Semi Condensed",sans-serif;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;width:100%}
+.pcard[hidden]{display:none}
+.empty3d{color:var(--gr);font-size:.95rem;padding:14px;border:1px dashed #2c303a}
+.pcard:not([hidden])~.empty3d{display:none}
+.chips3d{display:grid;gap:6px}
+.chips3d button{display:flex;align-items:center;gap:10px;text-align:left;background:#14151b;color:#e6e9ef;border:1px solid #22252d;padding:8px 10px;font:600 .92rem "Barlow Semi Condensed",sans-serif;cursor:pointer}
+.chips3d button i{font-style:normal;background:var(--red);color:#fff;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:.75rem;flex:none}
+.chips3d button em{margin-left:auto;font-style:normal;color:var(--gr)}
+.chips3d button.on,.chips3d button:hover{border-color:var(--red);background:#1c1e26}
+.v3d.nowebgl .stage3d,.v3d.nowebgl .tabs3d{display:none}
+@media(max-width:900px){.v3d{grid-template-columns:1fr}.stage3d{height:400px}}
+@media(prefers-reduced-motion:no-preference){.dot3d:not(.on){animation:pulse 2s infinite}@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(208,24,43,0)}100%{box-shadow:0 0 0 0 rgba(208,24,43,0)}}}
 </style>
 </head>
 <body>
@@ -195,6 +227,24 @@ footer .links{display:flex;gap:20px;flex-wrap:wrap}
 </section>
 <div class="chk" aria-hidden="true"></div>
 
+<section id="explora">
+  <div class="wrap">
+    <h2 class="sec-t">Explora tu moto en 3D</h2>
+    <p class="lead">Gira la moto con el mouse o el dedo y toca una pieza para ver su precio. Agrégala a tu pedido desde aquí.</p>
+    <div class="v3d" id="v3d">
+      <div class="tabs3d" role="tablist" aria-label="Vista">
+        <button class="tab3d" role="tab" data-mode="moto" aria-selected="true" type="button">Moto completa</button>
+        <button class="tab3d" role="tab" data-mode="motor" aria-selected="false" type="button">Motor</button>
+      </div>
+      <div class="stage3d"><div class="dots3d"></div><div class="hint3d">Arrastra para girar · rueda o pellizco para acercar</div></div>
+      <div class="side3d">
+        <div class="pcard" hidden><div class="pn"></div><div class="pm"></div><div class="pp"></div><button class="pa" type="button">Agregar al pedido</button></div>
+        <div class="empty3d">Toca un punto numerado para ver la pieza y su precio.</div>
+        <div class="chips3d" aria-label="Piezas"></div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="catalogo">
   <div class="wrap">
     <div class="sec-h"><h2>Catálogo</h2><p>Filtra por categoría o marca y agrega al carrito. Al terminar, envías el pedido por correo o por mensaje.</p></div>
@@ -322,6 +372,7 @@ function render(){
       <div class="row"><span class="price">S/ ${p.precio}</span><button data-add="${p.id}" aria-label="Agregar ${esc(p.nombre)} al carrito">Agregar</button></div>
     </article>`).join("") : `<p class="empty">No hay repuestos con esos filtros. Cambia la búsqueda o escríbenos.</p>`;
 }
+window.TOPITO={productos:productos,add:function(id){cart[id]=(cart[id]||0)+1;$("done").classList.remove("show");renderCart();}};
 $("grid").addEventListener("click",e=>{const b=e.target.closest("[data-add]");if(b){cart[b.dataset.add]=(cart[b.dataset.add]||0)+1;$("done").classList.remove("show");renderCart();}});
 
 function renderCart(){
@@ -390,5 +441,7 @@ render();renderCart();
   var g=document.getElementById("grid"); if(g)new MutationObserver(scan).observe(g,{childList:true});
 })();
 </script>
+<script type="importmap">{"imports":{"three":"../assets/vendor/three.module.min.js","three/addons/controls/OrbitControls.js":"../assets/vendor/OrbitControls.js","three/addons/environments/RoomEnvironment.js":"../assets/vendor/RoomEnvironment.js"}}</script>
+<script type="module" src="../assets/moto3d.js"></script>
 </body>
 </html>
