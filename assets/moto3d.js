@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 
 const T = window.TOPITO;               // { productos, add(id) }
@@ -174,7 +175,7 @@ floor.rotation.x = -Math.PI / 2; floor.position.y = -.01; scene.add(floor);
 const grid = new THREE.Mesh(new THREE.RingGeometry(2.9, 3.0, 64), new THREE.MeshBasicMaterial({ color: 0xd0182b, side: THREE.DoubleSide }));
 grid.rotation.x = -Math.PI / 2; scene.add(grid);
 
-const bike = buildBike(); bike.position.set(0, 0, 0); scene.add(bike);
+let bike = buildBike(); bike.position.set(0, 0, 0); scene.add(bike);
 const engine = buildEngine(); engine.scale.setScalar(1.7); engine.position.set(0, .9, 0); engine.visible = false; scene.add(engine);
 
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -191,7 +192,7 @@ let mode = "moto", selected = null;
 
 /* anclajes (para puntos señaladores) */
 function anchorFor(pid, m) {
-  const find = o => { let r = null; o.traverse(c => { if (!r && c.userData.pid === pid) r = c; }); return r; };
+  const find = o => { let r = null; o.traverse(c => { if (!r && c.userData.pidRoot === pid) r = c; }); if (r) return r; o.traverse(c => { if (!r && c.userData.pid === pid) r = c; }); return r; };
   return find(MODES[m].obj);
 }
 
@@ -209,7 +210,9 @@ function buildDots() {
   });
 }
 const tmp = new THREE.Vector3();
+let frame = 0;
 function updateDots() {
+  frame++;
   const w = canvasWrap.clientWidth, h = canvasWrap.clientHeight;
   Object.entries(dots).forEach(([pid, d]) => {
     if (!d.obj) return;
@@ -221,6 +224,13 @@ function updateDots() {
     d.el.style.display = vis ? "" : "none";
     d.el.style.transform = `translate(${(tmp.x * .5 + .5) * w}px, ${(-tmp.y * .5 + .5) * h}px) translate(-50%,-50%)`;
     d.el.classList.toggle("on", +pid === selected);
+    if (frame % 8 === 0) {
+      const cp = camera.position, target = bb.getCenter(new THREE.Vector3());
+      ray.set(cp, target.clone().sub(cp).normalize());
+      const hit = ray.intersectObject(MODES[mode].obj, true)[0];
+      d.occ = !!hit && hit.distance < cp.distanceTo(target) - 0.12 && hit.object.userData.pid !== +pid;
+      d.el.style.opacity = d.occ ? ".3" : "1";
+    }
   });
 }
 
@@ -281,7 +291,8 @@ renderer.domElement.addEventListener("pointermove", e => {
 /* ---------- modos ---------- */
 function setMode(m) {
   mode = m; clearSel();
-  bike.visible = m === "moto"; engine.visible = m === "motor";
+  const glb = MODES.moto.obj === MODES.motor.obj;
+  bike.visible = glb || m === "moto"; engine.visible = !glb && m === "motor";
   camera.position.set(...MODES[m].cam); controls.target.set(...MODES[m].target); controls.update();
   controls.autoRotate = !reduce;
   root.querySelectorAll(".tab3d").forEach(t => t.setAttribute("aria-selected", t.dataset.mode === m));
@@ -303,5 +314,26 @@ function loop() {
   if (!onScreen) return;
   controls.update(); renderer.render(scene, camera); updateDots();
 }
+
+/* ---------- modelo real (Blender) ---------- */
+new GLTFLoader().load("../assets/moto.glb", gltf => {
+  const m = gltf.scene;
+  m.traverse(n => {
+    const mt = /^P(\d+)_/.exec(n.name);
+    if (mt) { const pid = +mt[1]; n.userData.pidRoot = pid; n.traverse(c => { c.userData.pid = pid; }); }
+    if (n.isMesh) { n.castShadow = false; }
+  });
+  const box = new THREE.Box3().setFromObject(m), size = box.getSize(new THREE.Vector3()), ctr = box.getCenter(new THREE.Vector3());
+  m.position.set(-ctr.x, -box.min.y, -ctr.z);
+  const wrap = new THREE.Group(); wrap.add(m);
+  scene.remove(bike); bike = wrap; scene.add(bike);
+  floor.scale.setScalar(size.x / 6.4 * 1.15); grid.scale.setScalar(size.x / 6.4 * 1.15);
+  MODES.moto.obj = bike; MODES.motor.obj = bike;
+  MODES.moto.cam = [size.x * .75, size.y * 1.0, size.x * 1.15]; MODES.moto.target = [0, size.y * .42, 0];
+  MODES.motor.cam = [size.x * .38, size.y * .7, size.x * .55]; MODES.motor.target = [size.x * .08, size.y * .3, 0];
+  controls.minDistance = size.x * .35; controls.maxDistance = size.x * 3;
+  setMode(mode);
+}, undefined, () => { /* si falla, queda el modelo simple */ });
+
 setMode("moto"); resize(); loop();
 root.classList.add("ready");
